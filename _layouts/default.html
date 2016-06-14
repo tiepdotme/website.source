@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body class="page page-{{page.layout}}">
+    <div class="ui container">
+      {% include header.html %}
+    </div>
+    <div class="ui container">
+      {{ content }}
+    </div>
+    <div class="ui container footer">
+      {% include footer.html %}
+    </div>
+    {% include analytics.html %}
+  </body>
+</html>

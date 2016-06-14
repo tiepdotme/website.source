@@ -1,0 +1,27 @@
+<div class="portfolios">
+  {% assign portfolios = site.posts | where: "layout" , "work" %}
+  <div id="filters">
+    <span>Filter: </span>
+  {% for page in portfolios %}
+    <a class="ui label" data-filter=".{{ page.categories[0] | downcase }}">{{ page.categories[0] }}</a>
+  {% endfor %}
+  </div>
+  <div class="ui hidden divider"></div>
+  <div class="ui special stackable cards portfolio">
+    {% for page in portfolios %}
+    <div class="element-item transition card {{ page.categories[0] | downcase }}" data-category="{{ page.categories[0] | downcase }}">
+      <div class="blurring dimmable image">
+        <div class="ui dimmer">
+          <div class="content">
+            <div class="center">
+              <a class="ui button" href="{{page.url}}">{{page.title}}</a>
+            </div>
+          </div>
+        </div>
+        <img class="ui image" src="{{page.images[0] | prepend: "/assets/img/work/460/" |  prepend: site.baseurl }}" alt="{{page.title}}">
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="ui hidden divider"></div>
+</div>

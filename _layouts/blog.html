@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+<div class="ui grid">
+  <div class="ui eleven wide column text">
+    {% if page.subtitle %}
+      <h2 class="post-subtitle" itemprop="name headline">{{ page.subtitle }}</h2>
+    {% endif %}
+    {% if page.meta %}
+      <img class="ui fluid image" src="{{ page.meta | prepend:"/assets/img/blog/" | prepend: site.baseurl }}" alt="{{ page.title }}">
+      <div class="ui hidden divider"></div>
+    {% endif %}
+    {% include author.html %}
+    {{ content }}
+    <div class="ui hidden divider"></div>
+    {% include comments.html %}
+  </div>
+  <div class="ui five wide column">
+    {% include recentposts.html %}
+    {% include authorbig.html %}
+  </div>
+</div>

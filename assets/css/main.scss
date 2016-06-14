@@ -1,0 +1,133 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+
+$padd: 3.5rem;
+$paddmed: 2.5rem;
+$padsmall: 1.5rem;
+$fontsize: 1.2rem;
+
+
+body {
+  padding: 1em 0;
+  background-color: #fafafa;
+  color: #3b3b3b;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 400
+}
+.site-header {
+  padding: $padd 0;
+  .secondary.pointing.menu {
+    border: 0;
+  }
+}
+.post-title {
+  padding: 0;
+  margin: 0;
+}
+.post-subtitle {
+  margin: 0 0 25px 0;
+  font-weight: 300;
+}
+.masthead {
+  padding: 4rem 0;
+  h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: normal;
+  }
+}
+.footer {
+  padding: $paddmed 0;
+}
+.ui {
+  &.text {
+    font-size: $fontsize;
+  }
+}
+a:not(.button) {
+  color: #666 !important;
+  text-decoration: none;
+  :hover {
+    color: #666 !important;
+    text-decoration: underline !important;
+  }
+}
+.blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+.page-work {
+  img {
+    margin-bottom: $padsmall;
+  }
+}
+.page-default {
+  .masthead {
+    min-height: 400px;
+  }
+  .ui.cards>.card, &img {
+    border-radius: 0;
+    border: 0 none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    :only-child {
+      border-radius: 0 !important;
+    }
+  }
+}
+.page-post {
+  .post-header {
+    margin-bottom: 15px;
+  }
+}
+img, .ui.image, .image {
+  filter: grayscale(1);
+}
+img, .ui.image, .image {
+  &:hover{
+    filter: grayscale(0);
+  	transition-property: filter;
+  	transition-duration: 1s;
+  }
+}
+.portfolios {
+  min-height: 360px;
+}
+.author {
+  color: #bbb;
+  span {
+    color: #555;
+  }
+  &.white {
+    background: #FFF;
+    border: 1px solid #f2f2f2;
+    padding: $padsmall;
+  }
+}
+i:focus{
+  border: 0 none;
+  outline: 0 none;
+}
+.menu{
+  &.right {
+    a, div {
+      text-transform: uppercase !important;
+      font-weight: 700 !important;
+    }
+  }
+}

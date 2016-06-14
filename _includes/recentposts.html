@@ -1,0 +1,9 @@
+<h3>Recent Posts</h3>
+<div class="ui relaxed list">
+{% for post in site.posts offset:1 limit:5 %}
+  <div class="item">
+    <a class="header" href="{{ post.url }}">{{ post.title }}</a>
+    <div class="description">{{page.date | date: "%a, %b %d, %Y"}}</div>
+  </div>
+{% endfor %}
+</div>

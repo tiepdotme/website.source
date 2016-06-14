@@ -1,0 +1,8 @@
+{% assign author = site.data.authors[page.author] %}
+{% if author %}
+  <div class="author">
+    by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> posted <span>{{page.date | date: "%a, %b %d, %Y"}}</span>
+  </div>
+  <div class="ui hidden divider"></div>
+
+{% endif %}

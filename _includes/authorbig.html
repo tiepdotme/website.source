@@ -1,0 +1,28 @@
+{% assign author = site.data.authors[page.author] %}
+{% if author %}
+<div class="ui items author white">
+  <div class="item">
+    <a class="ui tiny image" href="{{ author.web }}">
+      <img src="https://www.gravatar.com/avatar/{{ author.hash | downcase}}">
+    </a>
+    <div class="content">
+      <a class="header" href="{{ author.web }}">{{ author.name }}</a>
+      <div class="description">
+        {{ author.bio | truncatewords: 10}}
+      </div>
+      {% if author.linkedin %}
+      <a href="{{author.linkedin}}"><i class="linkedin icon"></i></a>
+      {% endif %}
+      {% if author.github %}
+      <a href="{{author.github}}"><i class="github icon"></i></a>
+      {% endif %}
+      {% if author.twitter %}
+      <a href="{{author.twitter}}"><i class="twitter icon"></i></a>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+{% endif %}

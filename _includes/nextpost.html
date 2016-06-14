@@ -1,0 +1,13 @@
+{% if page.next.url and page.path contains '_posts/blog'%}
+<div class="ui steps fluid">
+  <div class="step">
+    <i class="angle double right icon"></i>
+    <a href="{{page.next.url}}">
+    <div class="content">
+      <div class="title">{{page.next.title}}</div>
+      <div class="description">Next Article</div>
+    </div>
+  </a>
+  </div>
+</div>
+{% endif %}
