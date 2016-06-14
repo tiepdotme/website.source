@@ -1,6 +1,9 @@
 jQuery(document).ready(function($) {
 
   jQuery('.dropdown').dropdown();
+  $('.logoo').popup();
+
+  
   $('.special.cards .image').dimmer({on: 'hover'});
 
   var $grid = $('.portfolio').isotope({
@@ -24,5 +27,15 @@ jQuery(document).ready(function($) {
     filterValue = filterFns[ filterValue ] || filterValue;
     $grid.isotope({ filter: filterValue });
   });
+
+  var pathname = window.location.pathname;
+  $("#menu > a.item").each(function(index) {
+    console.log($(this).attr('href'));
+    if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1)
+      $(this).addClass("active");
+  });
+
+  logoo
+
 
 });

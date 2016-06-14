@@ -5,6 +5,7 @@ subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
 categories: NodeJS
 images: ["photo-1452457779869-0a9ebbbdee99.jpeg", "IMG_20160504_173758.jpg"]
+permalink: /work/ksum
 ---
 
 

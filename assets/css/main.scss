@@ -95,7 +95,7 @@ a:not(.button) {
     margin-bottom: 15px;
   }
 }
-img, .ui.image, .image {
+img:not(.rgb), .ui.image, .image {
   filter: grayscale(1);
 }
 img, .ui.image, .image {
@@ -130,4 +130,7 @@ i:focus{
       font-weight: 700 !important;
     }
   }
+}
+.centered {
+  text-align: center;
 }

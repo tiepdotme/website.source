@@ -5,6 +5,7 @@ subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
 categories: Drupal
 images: ["wallpaper-homestead-small.jpg"]
+permalink: /work/metromatinee
 ---
 
 
