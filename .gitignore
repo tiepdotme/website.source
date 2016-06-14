@@ -6,3 +6,4 @@ node_modules
 .DS_**
 
 assets/semantic
+assets/raw
