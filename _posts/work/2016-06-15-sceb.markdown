@@ -1,0 +1,30 @@
+---
+layout: work
+title:  "SCEB Smart Contract Templates for Banking"
+subtitle: "blockchain based smart-contract templates"
+date:   2016-06-13 11:19:48 +0530
+categories: ["Blockchain", "Smart Contract"]
+images: ["sceb-logo.png", "sceb-screen.png"]
+permalink: /work/smart-contract-templates-banking-sceb
+work:
+  url: https://lightrainstech.github.io/sceb/
+  github: lightrainstech/sceb
+---
+
+SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.
+
+
+## Technology Stack
+* Ethereum Blockchain
+* Embark Framework
+* Solidity - smart-contract language
+* IPFS - decentralised file storage
+
+## Potential benefits
+* Cost Reductions
+* Efficiency Improvements
+* Reduce Risk
+* Reusable contracts
+* Less paperwork
+
+<div class="ui embed" data-source="youtube" data-id="GRJsL74urwI"></div>

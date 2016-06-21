@@ -6,7 +6,7 @@
       <img src="https://www.gravatar.com/avatar/{{ author.hash | downcase}}">
     </a>
     <div class="content">
-      <a class="header" href="{{ author.web }}">{{ author.name }}</a>
+      <a class="header" href="{{ author.web }}" rel="author">{{ author.name }}</a>
       <div class="description">
         {{ author.bio | truncatewords: 10}}
       </div>

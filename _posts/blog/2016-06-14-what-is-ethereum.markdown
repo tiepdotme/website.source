@@ -3,7 +3,6 @@ layout: blog
 title:  "What is Ethereum"
 subtitle: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"
 date:   2016-06-13 11:19:48 +0530
-categories: jekyll update
 meta: photo-1433878455169-4698e60005b1.jpeg
 author: niksmac
 permalink: /blogs/what-is-ethereum

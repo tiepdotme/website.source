@@ -8,12 +8,17 @@ $padd: 3.5rem;
 $paddmed: 2.5rem;
 $padsmall: 1.5rem;
 $fontsize: 1.2rem;
+$bg: #fafafa;
+$body: #3b3b3b;
+$offw: #a6a6a6;
+$white: #fff;
 
 
 body {
   padding: 1em 0;
-  background-color: #fafafa;
-  color: #3b3b3b;
+  background-color: $bg;
+  color: $body;
+  line-height: 2rem;
 }
 h1 {
   font-size: 3rem;
@@ -40,12 +45,34 @@ h2 {
   padding: 4rem 0;
   h1 {
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: normal;
+  }
+}
+.page-text {
+  a {
+    text-decoration: none;
+    position: relative;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 3px, rgba(0, 0, 0, 0) 3px);
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    a {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 2.5px, rgba(0, 0, 0, 0) 2.5px);
+    }
+  }
+  a:hover, a:focus {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #55abad 2px, #55abad 3px, rgba(0, 0, 0, 0) 3px);
+  }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    a:hover, a:focus {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #55abad 2px, #55abad 2.5px, rgba(0, 0, 0, 0) 2.5px);
+    }
   }
 }
 .footer {
@@ -55,6 +82,12 @@ h2 {
   &.text {
     font-size: $fontsize;
   }
+  .segment.centered.basic {
+    margin: 0 auto;
+  }
+  .big.divider {
+    margin: 2rem 0;
+  }
 }
 a:not(.button) {
   color: #666 !important;
@@ -63,12 +96,16 @@ a:not(.button) {
     color: #666 !important;
     text-decoration: underline !important;
   }
+  .alightbox {
+    display: block;
+  }
 }
-.blockquote {
+blockquote {
   padding: 10px 20px;
-  margin: 0 0 20px;
+  margin: 0 0 20px 20px;
   font-size: 17.5px;
-  border-left: 5px solid #eee;
+  border-left: 3px solid $offw;
+  font-style: italic;
 }
 .page-work {
   img {
@@ -98,11 +135,15 @@ a:not(.button) {
 img:not(.rgb), .ui.image, .image {
   filter: grayscale(1);
 }
-img, .ui.image, .image {
+img.lb-image {
+  filter: grayscale(0) !important;
+}
+
+img:not(.rgb), .ui.image, .image {
   &:hover{
     filter: grayscale(0);
-  	transition-property: filter;
-  	transition-duration: 1s;
+    transition-property: filter;
+    transition-duration: 1s;
   }
 }
 .portfolios {
@@ -134,3 +175,97 @@ i:focus{
 .centered {
   text-align: center;
 }
+ul, ol {
+  list-style: none;
+ margin-left: 0;
+ padding-left: 1em;
+ text-indent: -1em;
+
+ li:before {
+  content: "\0BB \020";
+  }
+}
+
+.menu.transition.visible{
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  margin-top: 0
+}
+.work {
+  float: left;
+  width: 350px;
+  margin-bottom: 35px;
+}
+.work:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.ohidden {
+  display: none;
+  visibility: hidden;
+}
+pre.highlight {
+  background: $body;
+  padding: 1rem;
+  color: #FFF;
+  border-radius: 4px
+}
+#menu.right.menu {
+  height: 80px
+}
+@media only screen and (max-width: 767px) {
+  [class*="mobile hidden"],
+  [class*="tablet only"]:not(.mobile),
+  [class*="computer only"]:not(.mobile),
+  [class*="large screen only"]:not(.mobile),
+  [class*="widescreen only"]:not(.mobile),
+  [class*="or lower hidden"] {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  [class*="mobile only"]:not(.tablet),
+  [class*="tablet hidden"],
+  [class*="computer only"]:not(.tablet),
+  [class*="large screen only"]:not(.tablet),
+  [class*="widescreen only"]:not(.tablet),
+  [class*="or lower hidden"]:not(.mobile) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  [class*="mobile only"]:not(.computer),
+  [class*="tablet only"]:not(.computer),
+  [class*="computer hidden"],
+  [class*="large screen only"]:not(.computer),
+  [class*="widescreen only"]:not(.computer),
+  [class*="or lower hidden"]:not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+  [class*="mobile only"]:not([class*="large screen"]),
+  [class*="tablet only"]:not([class*="large screen"]),
+  [class*="computer only"]:not([class*="large screen"]),
+  [class*="large screen hidden"],
+  [class*="widescreen only"]:not([class*="large screen"]),
+  [class*="or lower hidden"]:not(.computer):not(.tablet):not(.mobile) {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  [class*="mobile only"]:not([class*="widescreen"]),
+  [class*="tablet only"]:not([class*="widescreen"]),
+  [class*="computer only"]:not([class*="widescreen"]),
+  [class*="large screen only"]:not([class*="widescreen"]),
+  [class*="widescreen hidden"],
+  [class*="widescreen or lower hidden"] {
+    display: none !important;
+  }
+}
+.ui.menu.grid>.computer.only.row { padding:0; }

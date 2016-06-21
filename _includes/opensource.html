@@ -1,0 +1,10 @@
+{% if page.work.github %}
+<h4 class="ui horizontal divider header">
+  <i class="github icon"></i>
+  Contribute
+</h4>
+
+<a href="https://github.com/{{page.work.github}}/issues"><img src="https://img.shields.io/github/issues/{{page.work.github}}.svg?style=flat-square"></a>
+<a href="https://github.com/{{page.work.github}}/forks"><img src="https://img.shields.io/github/forks/{{page.work.github}}.svg?style=flat-square"></a>
+<a href="https://github.com/{{page.work.github}}/stars"><img src="https://img.shields.io/github/stars/{{page.work.github}}.svg?style=flat-square"></a>
+{% endif %}

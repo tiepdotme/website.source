@@ -3,15 +3,29 @@ layout: work
 title:  "Kerala Startup Mission"
 subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
-categories: NodeJS
-images: ["photo-1452457779869-0a9ebbbdee99.jpeg", "IMG_20160504_173758.jpg"]
-permalink: /work/ksum
+categories: ["Drupal"]
+images: ["ksum-1024.png", "IMG_20160504_173758.jpg"]
+permalink: /work/kerala-startup-mission
+client:
+  name: Kerala Startup Mission
+  url: https://startupmission.kerala.gov.in
 ---
 
+Kerala Startup Mission (KSUM) is India's first and successful Non Academic Business Incubator, hosted and housed inside Asia's Largest IT Park Technopark.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We dedicated 2 weeks for a comprehensive study of the information architecture. Having analyzed a suitable structure model for the content, we were able to start the wire-framing stage. Wireframes helped us interconnect all kinds of content types and entities of the website. We took full advantage of Drupal 7 and its new features. The fact that all entities come with fields helped us to create all the interconnections through references.
 
-## laboris nisi ut aliquip
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.
 
-> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+### Why Drupal was chosen:
+Drupal was chosen because of its wide variety of contributed modules and community support
+
+### Key modules/theme/distribution used:
+* Organic groups
+* Views
+* Flag
+* Rules
+* ImageCache
+* Feeds
+* Facebook Style Statuses

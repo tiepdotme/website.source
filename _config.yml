@@ -9,13 +9,10 @@
 title: Lightrains Technolabs Pvt Ltd
 email: hello@lightrains.com
 slogan: Technology Supercharged
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: Design and build applications utilizing blockchain technology
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lightrains.com" # the base hostname & protocol for your site
-
+logo: lightrains-tech-logo.svg
 
 twitter_username: lightrainstech
 github_username:  lightrainstech
@@ -25,13 +22,33 @@ phone:  91 471 4000056
 # Build settings
 markdown: kramdown
 permalink: :title
+array: []
+
 
 # Handling Reading
 safe:         false
 include:      [".htaccess"]
-exclude:      [".git", ".svn", "assets/semantic", "node_modules"]
+exclude:      [".git", ".svn", "assets/semantic", "node_modules", "gulpfile.js", "semantic.json"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 gems:
   - jekyll-gist
+  - jekyll-paginate
+
+paginate: 8
+paginate_path: "/blogs/page:num/"
+tag_page_dir: tag
+tag_feed_dir: tag
+tag_page_layout: tag_page
+tag_feed_layout: tag_feed
+
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  startings: [html, head, body]

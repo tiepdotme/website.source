@@ -1,23 +1,35 @@
 ---
 layout: default
 ---
-
 <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
 {% if page.subtitle %}
-  <h2 class="post-subtitle" itemprop="name headline">{{ page.subtitle }}</h2>
+<h2 class="post-subtitle" itemprop="name subheadline">{{ page.subtitle }}</h2>
 {% endif %}
-
 <div class="ui grid">
-  <div class="ui ten wide column text">
+  <div class="ui ten wide column text post-content">
     {% if page.meta %}
-      <img class="ui fluid image" src="{{ page.meta | prepend: site.baseurl }}" alt="{{ page.title }}">
-      <div class="ui hidden divider"></div>
+    <img class="ui fluid image" src="{{ page.meta | prepend: site.baseurl }}" alt="{{ page.title }}">
+    <div class="ui hidden divider"></div>
     {% endif %}
     {{ content }}
+    {% include opensource.html %}
   </div>
   <div class="ui six wide column">
     {% for image in page.images %}
-    <img class="ui top work aligned fluid image" src="{{ image | prepend: "/assets/img/work/" |  prepend: site.baseurl }}" alt="{{ page.title }}">
+    <a href="{{ image | prepend: "/assets/img/work/960/" | prepend: site.baseurl }}" data-lightbox="screns" data-title="{{ page.title }}" class="alightbox">
+      <img class="ui top work aligned fluid image" src="{{ image | prepend: "/assets/img/work/460/" | prepend: site.baseurl }}" alt="{{ page.title }}">
+    </a>
     {% endfor %}
   </div>
 </div>
+
+
+<!-- <div class="ui basic segment ">
+  <div class="ui breadcrumb">
+    <a class="section" href="/">Home</a>
+    <i class="right angle icon divider"></i>
+    <a class="section" href="/about/portfolio">Works</a>
+    <i class="right angle icon divider"></i>
+    <span class="active section">{{ page.title }}</span>
+  </div>
+</div> -->
