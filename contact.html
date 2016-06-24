@@ -7,45 +7,14 @@ title: Contact Us
 <h1>Contact Us</h1>
 
 <h2>We will get back to you within 7 Hrs. Effective communication is our goal in every aspect of our business.</h2>
-<div class="ui divider hidden"></div>
-<div class="ui divider hidden"></div>
-<div class="ui divider hidden"></div>
-<div class="ui grid">
+<div class="ui divider big hidden"></div>
+<div class="ui grid text">
   <div class="eight wide column">
-    <div class="ui internally celled grid">
-      <div class="row">
-        <div class="eight wide column centered">
-          <i class="map icon huge"></i>
-          <p></p>
-          <p>G3B, Thejaswini, Technopark Campus</p>
-          <p>Trivandrum, 695581</p>
-        </div>
-        <div class="eight wide column centered">
-          <i class="phone icon huge"></i>
-          <p></p>
-          <p>+{{site.phone}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="eight wide column centered">
-          <i class="mail outline icon huge"></i>
-          <p></p>
-          <p>{{site.email}}</p>
-        </div>
-        <div class="eight wide column centered">
-          <i class="github outline icon huge"></i>
-          <p></p>
-          <p>{{site.github_username}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="ui segment centered basic">
-          {% include social.html %}
-        </div>
-      </div>
-    </div>
+    {% include contact-detail.html %}
+    {% include social.html %}
   </div>
   <div class="eight wide column">
-    <div style="text-decoration:none; overflow:hidden; height:500px; width:500px; max-width:100%;"><div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Lightrains+Technolabs+Pvt+Ltd,+Technopark+Road,+Technopark+Campus,+Thiruvananthapuram,+Kerala,+India&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div></div>
+    <a href="{{site.gplus}}" target="_blank"><img src="/assets/img/lightrains-contact-us.png" alt="{{ site.title }} - {{ page.title}}" class="ui image fluid"></a>
   </div>
 </div>
+<div class="ui divider big hidden"></div>

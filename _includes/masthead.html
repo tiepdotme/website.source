@@ -1,6 +1,6 @@
 <div class="masthead">
-  <h1>Engineering Blockchain and smart contracts.</h1>
+  <h1>{{site.masthead}}</h1>
   <h2>Solutions for businesses to approach commerce, trading, supply chain and  identification through transparency and security powered by blockchain and smart contracts.</h2>
   <div class="ui hidden divider"></div>
-  <a href="mailto:{{site.email}}" class="ui button black huge ">{{site.email}}</a>
+  {% include email.html param="button" variable-param=page.variable %}
 </div>

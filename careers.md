@@ -24,13 +24,13 @@ date:   2016-06-13 11:19:48 +0530
         <li class="item">Work in the interesting new technologies</li>
         <li class="item">Explore the Ethereum Blockchain</li>
       </ul>
-      Say hello to: <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-      <div class="ui hidden divider"></div>
-      <div class="ui hidden divider"></div>
+      Say hello to: {% include email.html param="link" variable-param=page.variable %}
+      <div class="ui hidden big divider"></div>
     </div>
 
     <div class="column six wide">
       <img src="/assets/img/lightrains-team.jpg" alt="{{ site.title }} Team" class="ui image lazy fluid" />
+      <div class="ui hidden divider"></div>
       {% include contact-detail.html %}
       <br>
     </div>

@@ -1,7 +1,11 @@
 {% assign author = site.data.authors[page.author] %}
 {% if author %}
 <div class="author">
-  by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> posted on <span>{{page.date | date: "%a, %b %d, %Y"}}</span> in <a href="/tag/{{page.tag | first | downcase}}">{{page.tag | first }}</a>
+  by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a> posted on <span>{{page.date | date: "%a, %b %d, %Y"}}</span> {% if page.tag != nil %}in <a href="/tag/{{page.tag | first | downcase}}">{{page.tag | first }}</a> {% endif %}
+  <div class="ui pointing dropdown icon circular button right floated">
+    <i class="share alternate icon"></i>
+    {% include sharethis.html %}
+  </div>
 </div>
 <div class="ui hidden divider"></div>
 {% endif %}

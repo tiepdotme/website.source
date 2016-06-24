@@ -2,7 +2,7 @@
 layout: blog
 title:  "What is Blockchain"
 subtitle: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"
-date:   2016-06-13 11:19:48 +0530
+date: 2016-06-13 11:19:48 +0530
 meta: photo-1453743327117-664e2bf4e951.jpeg
 author: niksmac
 permalink: /blogs/what-is-blockchain

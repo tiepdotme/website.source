@@ -1,4 +1,3 @@
-<div class="ui hidden divider"></div>
 <div itemscope itemtype="http://schema.org/Organization">
   <a itemprop="url" href="https://lightrains.com"><div itemprop="name"><strong>{{ site.title }}</strong></div>
   </a>
@@ -10,7 +9,7 @@
     <span itemprop="addressRegion">Kerala</span> -
     <span itemprop="postalCode">695581</span><br>
     <span itemprop="addressCountry">India</span><br><br>
-    <i class="send outline icon"></i><a itemprop="email" href="mailto:{{ site.email }}">{{ site.email }}</a><br>
+    <i class="send outline icon"></i>{% include email.html param="link" variable-param=page.variable %}<br>
     <i class="call icon"></i><a itemprop="telephone" href="tel:+{{ site.phone | escape | remove: " " }}">{{ site.phone }}</a>
   </div>
 </div>

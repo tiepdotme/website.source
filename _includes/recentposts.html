@@ -1,10 +1,9 @@
 <h3>Recent Posts</h3>
 {% assign blogs = site.posts | where: "layout" , "blog" %}
-<div class="ui relaxed list">
-{% for post in blogs limit:5 %}
-  <div class="item">
-    <a class="header" href="{{ post.url }}">{{ post.title }}</a>
-    <div class="description">{{page.date | date: "%a, %b %d, %Y"}}</div>
-  </div>
+<ul>
+{% for post in blogs limit:6 %}
+  <li >
+    <a class="header" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
 {% endfor %}
-</div>
+</ul>

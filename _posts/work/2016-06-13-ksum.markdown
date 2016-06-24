@@ -4,7 +4,7 @@ title:  "Kerala Startup Mission"
 subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
 categories: ["Drupal"]
-images: ["ksum-1024.png", "IMG_20160504_173758.jpg"]
+images: ["ksum-1024.png", "ksum-front.png"]
 permalink: /work/kerala-startup-mission
 client:
   name: Kerala Startup Mission

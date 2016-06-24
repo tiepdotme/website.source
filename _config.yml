@@ -6,23 +6,24 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Lightrains Technolabs Pvt Ltd
-email: hello@lightrains.com
+title: Lightrains Technolabs
+email: hexlxlo@xligxhtrxaxixnxs.com
 slogan: Technology Supercharged
 description: Design and build applications utilizing blockchain technology
+masthead: Engineering Blockchain and Smart contracts.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lightrains.com" # the base hostname & protocol for your site
 logo: lightrains-tech-logo.svg
 
 twitter_username: lightrainstech
 github_username:  lightrainstech
+gplus: https://plus.google.com/108900746872278115127
 address: G3B, Thejaswini, Technopark Campus, Trivandrum, 695581
 phone:  91 471 4000056
 
 # Build settings
 markdown: kramdown
 permalink: :title
-array: []
 
 
 # Handling Reading
@@ -35,6 +36,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 gems:
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-sitemap
 
 paginate: 8
 paginate_path: "/blogs/page:num/"

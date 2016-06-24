@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blockchain Consulting & Development
-permalink: /consulting//blockchain-consulting
+permalink: /consulting/blockchain-consulting
 date:   2016-06-13 11:19:48 +0530
 
 ---
@@ -12,10 +12,10 @@ Organisations realize that Blockchain technologies have the potential to disrupt
 Solutions for companies to approach commerce, trading, transparency, security, identification, supply chain, auditing systems powered by blockchain and smart contracts. We focus mainly on the Blockchain and smart contracts; offering the following as our key bread & butter services:
 
 * Strategic architecting and consulting
-* Innovation workshops: research, education and training
 * Rapid prototype design and development
-* Enjoy real-time payments, zero fees, and simple global treasury management.
+* Innovation workshops: research, education and training
 * Supply Chain Financing Platform - approved payables financing
+* Real-time payments, zero fees, and simple global treasury management.
 * Receivables Marketplace - multi-lender global receivables marketplace
 
 

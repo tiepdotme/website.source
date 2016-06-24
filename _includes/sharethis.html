@@ -1,0 +1,16 @@
+{% assign share = page.url | prepend: site.url %}
+{% assign sharetxt = page.title | url_encode %}
+<div class="ui menu">
+  <a href="https://facebook.com/sharer.php?u={{ share }}" target="_blank" class="item">
+    <i class="facebook icon"></i> Facebook
+  </a>
+  <a href="https://plus.google.com/share?url={{ share }}" target="_blank" class="item">
+    <i class="google icon"></i> Google
+  </a>
+  <a href="https://linkedin.com/shareArticle?mini=true&amp;url={{ share }}" target="_blank" class="item">
+    <i class="linkedin icon"></i> Linkedin
+  </a>
+  <a href="https://twitter.com/share?url={{ share }}&amp;text={{sharetxt}}" class="item" target="_blank">
+    <i class="twitter icon"></i> Twitter
+  </a>
+</div>

@@ -11,8 +11,11 @@ gulp.task('default', function () {
   .pipe(gulp.dest('assets/js')),
 
   gulp.src('assets/semantic/src/themes/default/assets/fonts/*')
-  .pipe(gulp.dest('assets/css/themes/default/assets/fonts')),
+  .pipe(gulp.dest('assets/css/themes/default/assets/fonts'))
+})
 
+// Create Images
+gulp.task('images', function() {
   gulp.src('assets/raw/work/*.{jpg,jpeg,png}')
   .pipe(imageResize({
     width : 460,
@@ -40,8 +43,7 @@ gulp.task('default', function () {
     upscale : false
   }))
   .pipe(gulp.dest('assets/img/blog'))
-})
-
+});
 
 // Create Favicons
 gulp.task('favicon', function() {
