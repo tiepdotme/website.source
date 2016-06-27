@@ -1,6 +1,6 @@
 <h3>Posted In</h3>
 <div class="ui black labels">
-{% for category in site.tags %}
-  <a href="/tag/{{category[0] | downcase | replace:' ', '-' }}/" class="ui label" title="Blogs Tagged {{category[0]}}" >{{category[0] | camelcase }} <div class="detail">({{category[1].size}})</div> </a>
+{% for category in page.tag %}
+  <a href="/tag/{{category | downcase | replace:' ', '-' }}/" class="ui label" title="Blogs Tagged {{category}}" >{{category | camelcase }}</a>
 {% endfor %}
 </div>

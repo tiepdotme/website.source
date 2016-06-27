@@ -1,0 +1,44 @@
+---
+layout: work
+title:  "Pegke Loyalty"
+subtitle: "Customer Loyalty Reward management Software"
+date:   2015-06-13 11:19:48 +0530
+categories: ["Drupal"]
+images: ["pegke-home.png", "pegke-home1.png", "pegke-graph.png"]
+permalink: /work/pegke-loyalty
+work:
+  url: https://pegke.com
+  github: pegkeloyalty/merchant-api
+---
+
+Pegke Customer Loyalty & Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.
+
+
+Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.
+
+## Why Drupal was chosen:
+Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.
+
+ * High quality contributed modules which enable it to scale well to support very high traffic.
+ * Out of the box rich content management features and can be extended to match the very specific requirements of our website.
+ * An intuitive admin interface, enabling our web editorial team to update the site quickly and easily
+
+
+## Key modules/theme/distribution used:
+ * Advanced CSS/JS Aggregation
+ * Location
+ * Metatag
+ * Views
+ * Ubercart
+ * Session Limit
+ * Token
+ * Support Ticketing System
+ * Mandrill
+
+## Why these modules/theme/distribution were chosen:
+ * **Advanced CSS/JS Aggregation:** Make sure we are not making too many unnecessary http requests and wasting our resources.
+ * **Location:** Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our needs.
+ * **Metatag:** Metatag is one of the unavoidable thing in the SEO as well as in Social Media. We used it in many ways including and not limited to Twitter Cards, OG and Microformats.
+ * **Views:** No Drupal site is complete without views.
+ * **Ubercart:** Purchasing is the main activity of out website, and we have some future plans to expand it and Ubercart meets them all.
+ * **Mandrill:** We occasionally send email to our users, to make sure they receive it we use Mandrill

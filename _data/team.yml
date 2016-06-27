@@ -2,7 +2,6 @@
 - name:   Nikhil Mohan
   desig:  Managing Director
   email:  nikhil@lightrains.com
-  hash:   EC562DD86A88F57838A3A57BE91FCC2E
   bio:    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   linkedin: https://in.linkedin.com/in/nikhilmohan7
   github:  http://github.com/niksmac
@@ -11,9 +10,17 @@
 
 - name:   Sibiraj P.R.
   desig:  Managing Director
-  email:  nikhil@lightrains.com
-  hash:   EC562DD86A88F57838A3A57BE91FCC2E
-  bio:    Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+  email:  sibiraj@lightrains.com
+  bio:    Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+  linkedin: https://in.linkedin.com/in/nikhilmohan7
+  github:  http://github.com/niksmac
+  web:    http://nikhilmohan.in
+  twitter: http://twitter.com/niksmac_
+
+- name:   Pramod J George.
+  desig:  Managing Director
+  email:  pramod@lightrains.com
+  bio:    Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
   linkedin: https://in.linkedin.com/in/nikhilmohan7
   github:  http://github.com/niksmac
   web:    http://nikhilmohan.in

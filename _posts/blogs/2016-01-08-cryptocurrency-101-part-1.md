@@ -2,7 +2,7 @@
 layout: blog
 title:  "Cryptocurrency 101 - Part 1/3 - The Basics"
 permalink: /blogs/cryptocurrency-101
-tag: ["Cryptocurrency"]
+tag: ["Cryptocurrency", "Handbook"]
 excerpt: Cryptocurrency The Basics - Cryptocurrency is electricity converted into lines of code with monetary value. In the simplest of forms, cryptocurrency is digital currency.
 author: niksmac
 meta: cryptocurrency-101.png

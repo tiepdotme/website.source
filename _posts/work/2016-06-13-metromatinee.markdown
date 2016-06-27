@@ -4,7 +4,7 @@ title:  "MetroMatinee"
 subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
 categories: Drupal
-images: ["metromatinee_logo.png"]
+images: ["metromatinee_logo.png", "metromatinee_home.jpg"]
 permalink: /work/metromatinee
 client:
   name: TBF Technology Private Limited
@@ -13,7 +13,7 @@ client:
 
 MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.
 
-### Why Drupal was chosen:
+## Why Drupal was chosen:
 Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.
 
 ### Project (goals, requirements and outcome):

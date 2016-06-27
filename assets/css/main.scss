@@ -15,6 +15,9 @@ $green: #2e8b38;
 $offw: $bodyoff;
 $white: #fff;
 
+$secondFont: 'Merriweather Sans', sans-serif;
+$firstFont: 'Merriweather', sans-serif;
+
 @mixin grayScale ($pos) {
   -webkit-filter: grayscale($pos);
   -moz-filter: grayscale($pos);
@@ -28,15 +31,16 @@ body {
   background-color: $bg;
   color: $body;
   line-height: 2rem !important;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: $secondFont;
 }
 h1, h3, h4, h5 {
-  font-family: 'Merriweather', serif
+  font-family: $firstFont;
+  word-spacing: -0.125em;
 }
 h2 {
   font-weight: 300;
   color: $bodyoff;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: $secondFont;
 }
 body.night {
   background-color: #333;
@@ -107,6 +111,9 @@ h2 {
   .author {
     font-style: italic;
   }
+  p {
+    text-justify: inter-character;
+  }
 }
 .footer {
   padding: $paddmed 0;
@@ -126,6 +133,9 @@ h2 {
   }
   .label {
     font-weight: normal;
+  }
+  .secondary.pointing.menu .item {
+    font-family: $secondFont;
   }
 }
 a:not(.button) {
@@ -260,7 +270,7 @@ pre.highlight {
   border-radius: 4px
 }
 #menu.right.menu {
-  height: 60px
+  height: 50px
 }
 @media only screen and (max-width: 767px) {
   [class*="mobile hidden"],
@@ -321,4 +331,9 @@ pre.highlight {
 .fullw{
   width: 100%;
   margin-top: 40px;
+}
+.social {
+  i:hover {
+    text-decoration: none !important;
+  }
 }

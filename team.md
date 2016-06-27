@@ -11,7 +11,7 @@ title: Team behind the Scene
   <div class="column">
     <div class="ui fluid card">
       <div class="image">
-        <img src="https://www.gravatar.com/avatar/{{ thisAuthor.hash | downcase}}?s=300" alt="{{ thisAuthor.name }}">
+        <img src="{{ thisAuthor.email | to_gravatar }}" alt="Photo of {{ thisAuthor.name }}">
       </div>
       <div class="content">
       <div class="header">{{ thisAuthor.name }}</div>

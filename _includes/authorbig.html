@@ -3,23 +3,24 @@
 <div class="ui items author white">
   <div class="item">
     <a class="ui tiny image" href="{{ author.web }}">
-      <img src="https://www.gravatar.com/avatar/{{ author.hash | downcase}}">
+      <img src="{{ author.email | to_gravatar }}" alt="Photo of {{ author.name }}">
     </a>
     <div class="content">
       <a class="header" href="{{ author.web }}" rel="author">{{ author.name }}</a>
       <div class="description">
         {{ author.bio | truncatewords: 10}}
       </div>
-      {% if author.linkedin %}
-      <a href="{{author.linkedin}}"><i class="linkedin icon"></i></a>
-      {% endif %}
-      {% if author.github %}
-      <a href="{{author.github}}"><i class="github icon"></i></a>
-      {% endif %}
-      {% if author.twitter %}
-      <a href="{{author.twitter}}"><i class="twitter icon"></i></a>
-      {% endif %}
-
+      <div class="social">
+        {% if author.linkedin %}
+        <a href="{{author.linkedin}}"><i class="linkedin bordered icon"></i></a>
+        {% endif %}
+        {% if author.github %}
+        <a href="{{author.github}}"><i class="github bordered icon"></i></a>
+        {% endif %}
+        {% if author.twitter %}
+        <a href="{{author.twitter}}"><i class="twitter bordered icon"></i></a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

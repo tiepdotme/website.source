@@ -5,7 +5,7 @@ subtitle: "PSC HUB - Kerala PSC Questions Now Available as Telegram Bot"
 date:   2015-05-17 11:19:48 +0530
 meta: pschub-telegram-bot.jpeg
 author: niksmac
-tag: ["Telegram"]
+tags: ["Telegram"]
 permalink: /blogs/psc-hub-kerala-psc-questions-available-telegram-bot
 ---
 
