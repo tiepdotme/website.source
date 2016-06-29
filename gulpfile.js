@@ -2,6 +2,11 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var imageResize = require('gulp-image-resize');
 var favicons = require("gulp-favicons");
+var uglify = require('gulp-uglify');
+var concat = require("gulp-concat");
+var sass = require('gulp-ruby-sass');
+var cleanCSS = require('gulp-clean-css');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('default', function () {
   return gulp.src('assets/semantic/dist/*.css')
@@ -12,7 +17,82 @@ gulp.task('default', function () {
 
   gulp.src('assets/semantic/src/themes/default/assets/fonts/*')
   .pipe(gulp.dest('assets/css/themes/default/assets/fonts'))
-})
+});
+
+
+gulp.task('sass', () =>
+  sass("./assets/css/main.scss")
+    .on('error', sass.logError)
+    .pipe(gulp.dest("./assets/css/"))
+);
+
+var jsAllArray = [
+  './assets/js/jquery.min.js',
+  './assets/js/lightbox.min.js',
+  './assets/js/semantic.js',
+  './assets/js/site.js',
+];
+var jsPortfolioArray = [
+  './assets/js/jquery.min.js',
+  './assets/js/semantic.js',
+  './assets/js/isotope.pkgd.js',
+  './assets/js/site.js',
+];
+var jsFrontArray = [
+  './assets/js/jquery.min.js',
+  './assets/js/semantic.js',
+  './assets/js/site.js',
+];
+
+var cssAllArray = [
+  './assets/css/semantic.css',
+  './assets/css/lightbox.min.css',
+  './assets/css/main.css',
+];
+var cssFrontArray = [
+  './assets/css/semantic.css',
+  './assets/css/main.css',
+];
+var cssPortfolioArray = [
+  './assets/css/semantic.css',
+  './assets/css/lightbox.min.css',
+  './assets/css/main.css',
+];
+
+
+gulp.task('minify', function () {
+  gulp.src(jsFrontArray)
+    .pipe(uglify())
+    .pipe(concat('bundle-front.min.js'))
+    .pipe(gulp.dest('./assets/js/')),
+
+  gulp.src(cssFrontArray)
+    .pipe(concat('bundle-front.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8', keepSpecialComments: 0}))
+    .pipe(gulp.dest('./assets/css/')),
+
+  gulp.src(jsPortfolioArray)
+    .pipe(uglify())
+    .pipe(concat('bundle-work.min.js'))
+    .pipe(gulp.dest('./assets/js/')),
+
+  gulp.src(cssPortfolioArray)
+    .pipe(concat('bundle-work.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8', keepSpecialComments: 0}))
+    .pipe(gulp.dest('./assets/css/')),
+
+  gulp.src(jsAllArray)
+    .pipe(uglify())
+    .pipe(concat('bundle-work-lightbox.min.js'))
+    .pipe(gulp.dest('./assets/js/')),
+
+  gulp.src(cssAllArray)
+    .pipe(concat('bundle-work-lightbox.min.css'))
+    .pipe(cleanCSS({compatibility: 'ie8', keepSpecialComments: 0}))
+    .pipe(gulp.dest('./assets/css/'))
+
+});
+
 
 // Create Images
 gulp.task('images', function() {
@@ -52,7 +132,7 @@ gulp.task('favicon', function() {
     appDescription: "Lightrains Tech",
     background: "#FFFFFF",
     path: "/assets/favicons/",
-    url: "http://lightrains.com/",
+    url: "https://lightrains.com/",
     display: "standalone",
     orientation: "portrait",
     version: 1.0,

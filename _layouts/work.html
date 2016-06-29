@@ -5,7 +5,7 @@ layout: default
 {% if page.subtitle %}
 <h2 class="post-subtitle" itemprop="name subheadline">{{ page.subtitle }}</h2>
 {% endif %}
-<div class="ui grid">
+<div class="ui grid stackable">
   <div class="ui ten wide column text post-content">
     {% if page.meta %}
     <img class="ui fluid image" src="{{ page.meta | prepend: site.baseurl }}" alt="{{ page.title }}">

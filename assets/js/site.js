@@ -1,6 +1,3 @@
-(function () {
-   'use strict';
-}());
 jQuery(document).ready(function($) {
   jQuery('.dropdown').dropdown();
   $('.logoo').popup();
@@ -8,7 +5,7 @@ jQuery(document).ready(function($) {
   $('.ui.embed').embed();
 
   $('#moobmen').on('click', function() {
-    $('.ui.sidebar').sidebar('setting', 'transition', 'uncover').sidebar('toggle');
+    $('.ui.sidebar').sidebar('setting', 'transition', 'push').sidebar('toggle');
   });
 
   var pathname = window.location.pathname;
@@ -25,15 +22,19 @@ jQuery(document).ready(function($) {
   });
   $('.ui.dropdown').dropdown();
 
-});
-
-jQuery(window).load(function() {
   $('.obsa').each(function() {
     var $this = $(this);
     $this.attr('href', $this.attr('href').replace(/x/g,''));
     $this.html($this.html().replace(/x/g,''));
   });
+
+});
+
+jQuery(window).load(function() {
   // applyDayNightClass();
+
+  if(jQuery().isotope) {
+
   var colWidth = $('.work').width();
   var $grid = $('.portfolio').isotope({
     itemSelector: '.work',
@@ -49,6 +50,7 @@ jQuery(window).load(function() {
     var filterValue = $( this ).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   });
+  }
 });
 
 if(jQuery().lightbox) {

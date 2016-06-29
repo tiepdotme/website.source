@@ -1,6 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 @charset "utf-8";
 
 $padd: 3.5rem;
@@ -87,6 +84,16 @@ h2 {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
+}
+.work {
+  float: left;
+  width: 350px;
+  margin-bottom: 35px;
+}
+.work:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 .page-text {
   a, .ui.list .list>.item a.header, .ui.list>.item a.header {
@@ -249,16 +256,7 @@ ul, ol {
   border-top-right-radius: 0 !important;
   margin-top: 0
 }
-.work {
-  float: left;
-  width: 350px;
-  margin-bottom: 35px;
-}
-.work:after {
-  content: '';
-  display: block;
-  clear: both;
-}
+
 .ohidden {
   display: none;
   visibility: hidden;

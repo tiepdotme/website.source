@@ -1,7 +1,7 @@
-<script src="/assets/js/jquery.min.js"></script>
-<script src="{{ "/assets/js/semantic.min.js" | prepend: site.baseurl }}" ></script>
-<script src="/assets/js/isotope.pkgd.min.js"></script>
-{% if page.layout == "work" %}
-<script src="{{ "/assets/js/lightbox.min.js" | prepend: site.baseurl }}" ></script>
+{% if page.url == "/about/portfolio" %}
+<script src="/assets/js/bundle-work.min.js"></script>
+{% elsif page.layout == "work" %}
+<script src="/assets/js/bundle-work-lightbox.min.js"></script>
+{% else %}
+<script src="/assets/js/bundle-front.min.js"></script>
 {% endif %}
-<script src="{{ "/assets/js/site.js" | prepend: site.baseurl }}"></script>

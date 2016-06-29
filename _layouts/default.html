@@ -2,22 +2,26 @@
 <html>
 {% include head.html %}
 <body class="page page-{{page.layout}} path-{{page.class | default: 'inner'}}">
-  <div class="ui inverted labeled icon left inline vertical sidebar menu" style="">
-    <a class="item">
+  <div class="ui labeled icon left sidebar vertical menu" style="">
+    <a class="item" href="/">
       <i class="home icon"></i>
       Home
     </a>
-    <a class="item">
-      <i class="block layout icon"></i>
-      Topics
-    </a>
-    <a class="item">
+    <a class="item" href="/about/lightrains">
       <i class="smile icon"></i>
-      Friends
+      About
     </a>
-    <a class="item">
-      <i class="calendar icon"></i>
-      History
+    <a class="item" href="/consulting">
+      <i class="spy icon"></i>
+      Expert
+    </a>
+    <a class="item" href="/blogs">
+      <i class="block layout icon"></i>
+      Blog
+    </a>
+    <a class="item" href="/about/contact">
+      <i class="send icon"></i>
+      Contact
     </a>
   </div>
 
@@ -28,7 +32,7 @@
     <div class="ui container">
       {{ content }}
     </div>
-    <div class="fullw">
+    <div class="fullw mobile hidden">
       <div class="ui container footer">
         {% include footer.html %}
       </div>
