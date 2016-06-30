@@ -261,7 +261,7 @@ ul, ol {
   display: none;
   visibility: hidden;
 }
-pre.highlight {
+pre.highlight, pre {
   background: $body;
   padding: 1rem;
   color: #FFF;
@@ -278,6 +278,9 @@ pre.highlight {
   [class*="widescreen only"]:not(.mobile),
   [class*="or lower hidden"] {
     display: none !important;
+  }
+  .site-header, .masthead {
+    padding: 1.5rem 0;
   }
 }
 

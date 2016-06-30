@@ -3,7 +3,6 @@ layout: post
 title: About Us
 permalink: /about/lightrains
 date:   2016-06-13 11:19:48 +0530
-
 ---
 
 A technology start up with a fantastic [team](/about/team) of professionals who never gets tired with coding and creativity. We work on various open source, social good project as well as consultation for clients from various domains.

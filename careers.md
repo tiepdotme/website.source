@@ -24,10 +24,18 @@ date:   2016-06-13 11:19:48 +0530
         <li class="item">Work in the interesting new technologies</li>
         <li class="item">Explore the Ethereum Blockchain</li>
       </ul>
-      Say hello to: {% include email.html param="link" variable-param=page.variable %}
       <div class="ui hidden big divider"></div>
-    </div>
 
+      {% assign vacancies = site.pages | where: "ptype", "career" %}
+
+      <h2>Open Positions</h2>
+      <div class="ui middle bulleted aligned animated list">
+        {% for post in vacancies %}
+          <div class="item"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        {% endfor %}
+      </div>
+      
+    </div>
     <div class="column six wide">
       <img src="/assets/img/lightrains-team.jpg" alt="{{ site.title }} Team" class="ui image lazy fluid" />
       <div class="ui hidden divider"></div>

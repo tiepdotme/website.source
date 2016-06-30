@@ -4,7 +4,8 @@ jQuery(document).ready(function($) {
   $('.special.cards .image').dimmer({on: 'hover'});
   $('.ui.embed').embed();
 
-  $('#moobmen').on('click', function() {
+  $('#moobmen').on('click', function(e) {
+    e.preventDefault();
     $('.ui.sidebar').sidebar('setting', 'transition', 'push').sidebar('toggle');
   });
 
@@ -13,7 +14,6 @@ jQuery(document).ready(function($) {
     if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1) {
       $(this).addClass("active");
     }
-
   });
 
   $('.right.menu.open').on("click",function(e){

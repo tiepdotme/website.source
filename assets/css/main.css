@@ -201,7 +201,7 @@ ul, ol {
   display: none;
   visibility: hidden; }
 
-pre.highlight {
+pre.highlight, pre {
   background: #181818;
   padding: 1rem;
   color: #FFF;
@@ -217,7 +217,10 @@ pre.highlight {
   [class*="large screen only"]:not(.mobile),
   [class*="widescreen only"]:not(.mobile),
   [class*="or lower hidden"] {
-    display: none !important; } }
+    display: none !important; }
+
+  .site-header, .masthead {
+    padding: 1.5rem 0; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   [class*="mobile only"]:not(.tablet),
   [class*="tablet hidden"],
