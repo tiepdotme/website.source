@@ -4,9 +4,9 @@ jQuery(document).ready(function($) {
   $('.special.cards .image').dimmer({on: 'hover'});
   $('.ui.embed').embed();
 
-  $('#moobmen').on('click', function(e) {
+  $('#mobmenu').on('click', function(e) {
     e.preventDefault();
-    $('.ui.sidebar').sidebar('setting', 'transition', 'push').sidebar('toggle');
+    $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');
   });
 
   var pathname = window.location.pathname;

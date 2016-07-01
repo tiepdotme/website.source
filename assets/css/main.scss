@@ -6,7 +6,7 @@ $padsmall: 1.5rem;
 $fontsize: 1.2rem;
 
 $bg: #fafafa;
-$body: #181818;
+$body: #202020;
 $bodyoff: #323232;
 $green: #2e8b38;
 $offw: $bodyoff;
@@ -22,7 +22,9 @@ $firstFont: 'Merriweather', sans-serif;
   -o-filter: grayscale($pos);
   filter: grayscale($pos);
 }
-
+html {
+  background-color: $bg;
+}
 body {
   padding: 1em 0;
   background-color: $bg;

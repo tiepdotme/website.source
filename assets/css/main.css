@@ -1,7 +1,10 @@
+html {
+  background-color: #fafafa; }
+
 body {
   padding: 1em 0;
   background-color: #fafafa;
-  color: #181818;
+  color: #202020;
   line-height: 2rem !important;
   font-family: "Merriweather Sans", sans-serif; }
 
@@ -202,7 +205,7 @@ ul, ol {
   visibility: hidden; }
 
 pre.highlight, pre {
-  background: #181818;
+  background: #202020;
   padding: 1rem;
   color: #FFF;
   border-radius: 4px; }

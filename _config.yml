@@ -13,7 +13,7 @@ slogan: Technology Supercharged
 masthead: Engineering Blockchain and Smart contracts.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lightrains.com" # the base hostname & protocol for your site
-logo: lightrains-tech-logo.svg
+logo: assets/img/lightrains-logo.png
 
 twitter_username: lightrainstech
 github_username:  lightrainstech
