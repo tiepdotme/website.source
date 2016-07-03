@@ -20,7 +20,7 @@
     "postalCode": "695581",
     "streetAddress": "G3B, Thejaswini, Technopark Campus"
   },
-  "logo": "{{ '/assets/img/lightrins-contact-us.png' | prepend: site.url }}",
+  "logo": "{{ site.logo | prepend:"/" | prepend: site.url }}",
   "sameAs" : {{ site.social | jsonify }}
 }
 </script>

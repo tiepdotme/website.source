@@ -147,7 +147,7 @@ gulp.task('favicon', function() {
       coast: false,
       favicons: true,
       firefox: true,
-      opengraph: true,
+      opengraph: false,
       twitter: true,
       windows: false,
       yandex: false

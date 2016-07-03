@@ -4,7 +4,7 @@ html {
 body {
   padding: 1em 0;
   background-color: #fafafa;
-  color: #202020;
+  color: #292724;
   line-height: 2rem !important;
   font-family: "Merriweather Sans", sans-serif; }
 
@@ -205,7 +205,7 @@ ul, ol {
   visibility: hidden; }
 
 pre.highlight, pre {
-  background: #202020;
+  background: #292724;
   padding: 1rem;
   color: #FFF;
   border-radius: 4px; }
@@ -265,3 +265,9 @@ pre.highlight, pre {
 
 .social i:hover {
   text-decoration: none !important; }
+
+code {
+  background: #323232;
+  padding: 1px 2px;
+  border-radius: 2px;
+  color: #fff; }

@@ -1,0 +1,32 @@
+{% assign title = page.title | defaut: site.title %}
+{% assign tile = page.meta | prepend:"/assets/img/blog/" | prepend: site.url %}
+{% assign description =  page.content | strip_html | strip_newlines | strip | truncate: 160, "" %}
+{% assign pageurl = page.url | prepend: site.url %}
+{% assign author = site.data.authors[page.author] %}
+{% assign individual_account = site.data.authors[page.author].twitter %}
+{% assign authormeta = author.name | append: ", " | appned: author.email %}
+
+<!-- Facebook / Open Graph -->
+<meta property="og:url" content="{{pageurl}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
+<meta property="og:image" content="{{tile}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:site_name" content="{{site.title}}">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="{{ authormeta }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{site.twitter_username}}">
+<meta name="twitter:creator" content="@{{individual_account}}">
+<meta name="twitter:url" content="{{pageurl}}">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{description}}">
+<meta name="twitter:image" content="{{tile}}">
+
+<!-- Google+ / Schema.org -->
+<link href="https://plus.google.com/+Lightrainstech" rel="publisher">
+<meta itemprop="name" content="{{title}}">
+<meta itemprop="description" content="{{description}}">
+<meta itemprop="image" content="{{tile}}">

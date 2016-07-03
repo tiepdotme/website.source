@@ -2,8 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title | append: " ⚡️ " | append: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | append: " ⚡ " | append: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   {% if page.content %}
     {% assign meta =  page.content | strip_html | strip_newlines | strip | truncate: 160, "" %}
@@ -15,9 +14,7 @@
     {% assign meta = site.masthead | prepend: "Blockchain Consulting & Development. " | strip | truncate: 160, "" %}
   {% endif %}
 
-
   <meta name="description" content="{{meta}}">
-
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet">
 
   {% if page.url == "/about/portfolio" %}
@@ -28,14 +25,16 @@
   <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% endif %}
 
-
   {% if page.url == "/404.html" %}
     <meta http-equiv="refresh" content="3; url=/">
   {% endif %}
 
-
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  {% if page.layout == 'blog' %}
+    {% include meta-og-schema.html %}
+  {% endif %}
 
   {% include favicons.html %}
 </head>

@@ -2,9 +2,6 @@
 {% if author %}
 <div class="ui items author white">
   <div class="item">
-    <a class="ui tiny image" href="{{ author.web }}">
-      <img src="{{ author.email | to_gravatar }}" alt="Photo of {{ author.name }}">
-    </a>
     <div class="content">
       <a class="header" href="{{ author.web }}" rel="author">{{ author.name }}</a>
       <div class="description">
@@ -18,7 +15,7 @@
         <a href="{{author.github}}"><i class="github bordered icon"></i></a>
         {% endif %}
         {% if author.twitter %}
-        <a href="{{author.twitter}}"><i class="twitter bordered icon"></i></a>
+        <a href="https://twitter.com/{{author.twitter}}"><i class="twitter bordered icon"></i></a>
         {% endif %}
       </div>
     </div>

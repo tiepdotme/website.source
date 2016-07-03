@@ -6,7 +6,7 @@ $padsmall: 1.5rem;
 $fontsize: 1.2rem;
 
 $bg: #fafafa;
-$body: #202020;
+$body: #292724;
 $bodyoff: #323232;
 $green: #2e8b38;
 $offw: $bodyoff;
@@ -339,4 +339,10 @@ pre.highlight, pre {
   i:hover {
     text-decoration: none !important;
   }
+}
+code {
+  background: $bodyoff;
+  padding: 1px 2px;
+  border-radius: 2px;
+  color: $white;
 }
