@@ -1,0 +1,36 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"{{ page.url | remove:'/amp' | prepend: site.baseurl | prepend: site.url }}"
+  },
+  "headline": "{{page.title}}",
+  "about": "{{page.category | default: site.masthead }}",
+  "sameAs": "{{ page.url | remove:'/amp' | prepend: site.baseurl | prepend: site.url }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ site.logo | prepend:"/" | prepend: site.url }}",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{site.title}}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo | prepend:"/" | prepend: site.url }}",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "{% if page.body %}{{page.body | strip_html | strip_newlines | truncate: 160 | replace: '##', '' | strip}}{% else %}{{site.masthead }}{% endif %}"
+}
+</script>

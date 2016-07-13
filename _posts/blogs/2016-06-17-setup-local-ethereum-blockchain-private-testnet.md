@@ -13,8 +13,8 @@ Setting up a private chain is useful for testing purposes or simply for playing 
 
 **Prerequisites**
 
- * [geth](https://github.com/ethereum/go-ethereum/wiki)
- * [ubuntu 14.04](http://releases.ubuntu.com/14.04/)
+* [geth](https://github.com/ethereum/go-ethereum/wiki)
+* [ubuntu 14.04](http://releases.ubuntu.com/14.04/)
 
 
 ## The Fist Block - Genesis Block
@@ -28,7 +28,7 @@ Great, so how do we make one of these genesis blocks? Well its fairly simple the
 
 ```
 {
-    "nonce": "0x0000000000000042",
+  "nonce": "0x0000000000000042",
     "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
     "difficulty": "0x4000",
     "alloc": {},
@@ -60,7 +60,7 @@ personal.newAccount("mypassword"); 0xcc8C048426978c5877212281b8a75F1B4E71a862
 ```
 
 The last command above generated a new account with address ‘0xcc8C048426978c5877212281b8a75F1B4E71a862’
-Once you’ve generated your account, quit geth with <ctrl-c> and remove every folder except keystore/ from your datadir:
+Once you’ve generated your account, quit geth with ctrl-c and remove every folder except keystore/ from your datadir:
 
 ```
 $ cd <your datadir>
@@ -71,9 +71,9 @@ update your genesis block json, adding the following to the alloc key:
 
 ```
 "alloc": {
-    "<your account address e.g. 0xcc8C048426978c5877212281b8a75F1B4E71a862>": {
-        "balance": "10000000000000000000"
-    }
+  "<your account address e.g. 0xcc8C048426978c5877212281b8a75F1B4E71a862>": {
+    "balance": "10000000000000000000"
+  }
 }
 ```
 
@@ -84,9 +84,9 @@ Now re-run the geth command using the newly updated genesis json file and the sa
 
 ```
 $ primary = eth.accounts[0];
-  '0xcc8C048426978c5877212281b8a75F1B4E71a862'
+'0xcc8C048426978c5877212281b8a75F1B4E71a862'
 $ balance = web3.fromWei(eth.getBalance(primary), "ether");
-  '10'
+'10'
 ```
 
 ## Using the local Blockchain

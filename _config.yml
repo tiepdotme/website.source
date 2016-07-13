@@ -74,3 +74,5 @@ compress_html:
   blanklines: true
   profile: false
   startings: []
+
+ampdir: amp

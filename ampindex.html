@@ -1,0 +1,39 @@
+---
+layout: null
+date:   2015-06-13 11:19:48 +0530
+permalink: /amp/
+title: AMP
+---
+
+{% raw %}
+  <!doctype html>
+  <html ⚡>
+{% endraw %}
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.title | append: " / " |append: page.title }}</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <link rel="canonical" href="/blogs/">
+  
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet" type='text/css'>
+
+  {% include amp-css.html %}
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  {% include schema.html %}
+  {% include schema-amp.html %}
+</head>
+<body>
+{% include amp-menu.html %}
+<h1 class="post-title ui header huge"> Blogs</h1>
+<div class="ampblogs">
+  <ul class="ui list">
+    {% assign siteBlogs = site.posts | where:'layout', 'blog' %}
+    {% for post in siteBlogs %}
+    <li><a href="{{ post.url | prepend: '/amp' | append:"/index.html" }}" title="{{ post.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+</body>
+</html>
