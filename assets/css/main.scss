@@ -12,19 +12,21 @@ $green: #2e8b38;
 $offw: $bodyoff;
 $white: #fff;
 
-$secondFont: 'Merriweather Sans', sans-serif;
-$firstFont: 'Merriweather', sans-serif;
+$secondFont: "Merriweather Sans", sans-serif;
+$firstFont: "Merriweather", sans-serif;
 
-@mixin grayScale ($pos) {
+@mixin grayScale($pos) {
   -webkit-filter: grayscale($pos);
   -moz-filter: grayscale($pos);
   -ms-filter: grayscale($pos);
   -o-filter: grayscale($pos);
   filter: grayscale($pos);
 }
+
 html {
   background-color: $bg;
 }
+
 body {
   padding: 1em 0;
   background-color: $bg;
@@ -32,23 +34,29 @@ body {
   line-height: 2rem !important;
   font-family: $secondFont;
 }
+
 h1, h3, h4, h5 {
   font-family: $firstFont;
   word-spacing: -0.125em;
 }
+
 h2 {
   font-weight: 300;
   color: $bodyoff;
   font-family: $secondFont;
 }
+
 body.night {
   background-color: #333;
+
   p, div, span, a {
-    color: $offw !important
+    color: $offw !important;
   }
+
   h1, h2, h3, h4 {
     color: #e8e8e8 !important;
   }
+
   a.button.black {
     background-color: $white !important;
     color: #333 !important;
@@ -58,106 +66,133 @@ body.night {
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 1.8rem;
-  font-weight: 400
+  font-weight: 400;
 }
+
 .site-header {
   padding: $padd 0;
+
   .secondary.pointing.menu {
     border: 0;
   }
 }
+
 .post-title {
   padding: 0;
   margin: 0;
 }
+
 .post-subtitle {
   margin: 0 0 25px 0;
   font-weight: 300;
 }
+
 .masthead {
   padding: 5rem 0 4rem 0;
+
   h1 {
     margin-bottom: 20px;
     font-weight: 400;
   }
+
   h2 {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
 }
+
 .work {
   float: left;
   width: 350px;
   margin-bottom: 35px;
 }
+
 .work:after {
   content: '';
   display: block;
   clear: both;
 }
+
 .page-text {
-  a, .ui.list .list>.item a.header, .ui.list>.item a.header {
+  a, .ui.list .list > .item a.header, .ui.list > .item a.header {
     text-decoration: none;
     position: relative;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 3px, rgba(0, 0, 0, 0) 3px);
   }
+
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     a {
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 2.5px, rgba(0, 0, 0, 0) 2.5px);
     }
   }
+
   a:hover, a:focus {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $green 2px, $green 3px, rgba(0, 0, 0, 0) 3px);
   }
+
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
     a:hover, a:focus {
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $green 2px, $green 2.5px, rgba(0, 0, 0, 0) 2.5px);
     }
   }
+
   .author {
     font-style: italic;
   }
+
   p {
     text-justify: inter-character;
   }
 }
+
 .footer {
   padding: $paddmed 0;
+
   .slogan {
     font-size: 12px;
   }
 }
+
 .ui {
   &.text {
     font-size: $fontsize;
   }
+
   .segment.centered.basic {
     margin: 0 auto;
   }
+
   .big.divider {
     margin: 2rem 0;
   }
+
   .label {
     font-weight: normal;
   }
+
   .secondary.pointing.menu .item {
     font-family: $secondFont;
   }
 }
+
 a:not(.button) {
   color: #666 !important;
   text-decoration: none;
+
   :hover {
     color: #666 !important;
     text-decoration: underline !important;
   }
+
   .alightbox {
     display: block;
   }
 }
+
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px 20px;
@@ -165,27 +200,31 @@ blockquote {
   border-left: 3px solid $offw;
   font-style: italic;
 }
+
 .page-work {
   img {
     margin-bottom: $padsmall;
   }
 }
+
 .page-default {
   .masthead {
     min-height: 400px;
   }
-  .ui.cards>.card, &img {
+
+  .ui.cards > .card, &img {
     border-radius: 0;
     border: 0 none;
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+
     :only-child {
       border-radius: 0 !important;
     }
   }
-
 }
+
 .path-front {
   .footer {
     position: fixed;
@@ -196,44 +235,54 @@ blockquote {
     padding-bottom: 10px;
   }
 }
+
 .page-post {
   .post-header {
     margin-bottom: 15px;
   }
 }
+
 img:not(.rgb), .ui.image, .image {
   @include grayScale(1);
 }
+
 img.lb-image {
   @include grayScale(0);
 }
 
 img:not(.rgb), .ui.image, .image {
-  &:hover{
+  &:hover {
     @include grayScale(0);
+
     transition-property: filter;
     transition-duration: 1s;
   }
 }
+
 .portfolios {
   min-height: 360px;
 }
+
 .author {
   color: #bbb;
+
   span {
     color: #555;
   }
+
   &.white {
     background: #FFF;
     border: 1px solid #f2f2f2;
     padding: $padsmall;
   }
 }
-i:focus{
+
+i:focus {
   border: 0 none;
   outline: 0 none;
 }
-.menu{
+
+.menu {
   &.right {
     a, div {
       text-transform: uppercase !important;
@@ -241,37 +290,44 @@ i:focus{
     }
   }
 }
+
 .centered {
   text-align: center;
 }
+
 ul, ol {
   list-style: none;
   margin-left: 0;
   padding-left: 1em;
   text-indent: -1em;
+
   li:before {
     content: "\0BB \020";
   }
 }
-.menu.transition.visible{
+
+.menu.transition.visible {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
-  margin-top: 0
+  margin-top: 0;
 }
 
 .ohidden {
   display: none;
   visibility: hidden;
 }
+
 pre.highlight, pre {
-  background: $body;
+  background: $bodyoff;
   padding: 1rem;
   color: #FFF;
-  border-radius: 4px
+  border-radius: 4px;
 }
+
 #menu.right.menu {
-  height: 50px
+  height: 50px;
 }
+
 @media only screen and (max-width: 767px) {
   [class*="mobile hidden"],
   [class*="tablet only"]:not(.mobile),
@@ -281,9 +337,11 @@ pre.highlight, pre {
   [class*="or lower hidden"] {
     display: none !important;
   }
+
   .site-header, .masthead {
     padding: 1.5rem 0;
   }
+
   .ui.horizontal.divider {
     white-space: normal !important;
     display: inline-block;
@@ -333,17 +391,22 @@ pre.highlight, pre {
     display: none !important;
   }
 }
-.ui.menu.grid>.computer.only.row { padding:0; }
 
-.fullw{
+.ui.menu.grid > .computer.only.row {
+  padding: 0;
+}
+
+.fullw {
   width: 100%;
   margin-top: 40px;
 }
+
 .social {
   i:hover {
     text-decoration: none !important;
   }
 }
+
 code {
   background: $bodyoff;
   padding: 1px 2px;

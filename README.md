@@ -6,8 +6,8 @@
 
 ## How to Build
 
- 1. run `gulp default`
- 2. run `gulp sass`
- 3. run `gulp minify`
- 4. run `gulp images`
- 5. run `gulp favicon`
+1. run `gulp default`
+2. run `gulp sass`
+3. run `gulp minify`
+4. run `gulp images`
+5. run `gulp favicon`

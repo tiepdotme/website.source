@@ -1,38 +1,47 @@
-<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif
-  %}</title>
+  {% if page.layout == "blog" %}
 
-  <title>{% if page.title %}{{ page.title | append: " &#226;&#353;&#161; " | append: site.title |
-  escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  {% else %}
+  <title>{% if page.title %}{{ page.title | append: " ⚡️ " | append: site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  {% endif %}
+
+  {% if page.content %}
+  {% assign meta =  page.content | strip_html | strip_newlines | strip | truncate: 160, "" %}
+  {% else %}
+  {% assign meta = site.masthead | truncate: 160, "" %}
+  {% endif %}
+
+  {% if page.url == "/" %}
+  {% assign meta = site.masthead | prepend: "Blockchain Consulting & Development. " | strip | truncate: 160, "" %}
+  {% endif %}
+
   <meta name="description" content="{{meta}}">
-  <link rel="amphtml" href=
-  "{{%20page.url%20|%20prepend:%20'/amp'%20|%20prepend:%20site.baseurl%20|%20prepend:%20site.url%20|%20append:%20'/index.html'%20}}">
-  <link href=
-  "//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&amp;subset=latin"
-  rel="stylesheet" type="text/css">
-  <link href="{{" prepend:="" site.baseurl="" rel="stylesheet" type="text/css">
-  <link href="{{" prepend:="" site.baseurl="" rel="stylesheet" type="text/css">
-  <link href="{{" prepend:="" site.baseurl="" rel="stylesheet" type="text/css">
-  <meta http-equiv="refresh" content="3; url=/">
-  <link rel="canonical" href=
-  "{{%20page.url%20|%20replace:'index.html',''%20|%20prepend:%20site.baseurl%20|%20prepend:%20site.url%20}}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{" prepend:=""
-  site.baseurl="" prepend:="" site.url="">
-</head>
 
-<body>
-  {% if page.layout == 'blog' %} {% else%} {% endif %} {% if page.content %} {% assign meta =
-  page.content | strip_html | strip_newlines | strip | truncate: 160, "" | slugify | replace: "-",
-  " " | capitalize %} {% else %} {% assign meta = site.masthead | strip | truncate: 160, "" %} {%
-  endif %} {% if page.url == "/" %} {% assign meta = site.masthead | prepend: "Blockchain
-  Consulting &amp; Development. " | strip | truncate: 160, "" %} {% endif %} {% if page.url ==
-  "/about/portfolio" %} {% elsif page.layout == "work" %} {% else %} {% endif %} {% if page.url ==
-  "/404.html" %} {% endif %} {% if page.layout == 'blog' %} {% include meta-og-schema.html %} {%
-  endif %} {% include favicons.html %}
-</body>
-</html>
+  <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet">
+
+  {% if page.url == "/about/portfolio" %}
+  <link href="{{ "/assets/css/bundle-work.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  {% elsif page.layout == "work" %}
+  <link href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  {% else %}
+  <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  {% endif %}
+
+
+  {% if page.url == "/404.html" %}
+  <meta http-equiv="refresh" content="3; url=/">
+  {% endif %}
+
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="amphtml" href="{{ page.permalink | prepend: '/amp' | prepend: site.baseurl | prepend: site.url }}">
+
+  {% include favicons.html %}
+</head>
