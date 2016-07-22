@@ -6,7 +6,7 @@ date:   2016-06-30 01:19:48 +0530
 meta: ES6-ecmascript6-logo.jpg
 author: niksmac
 permalink: /blogs/es6
-tag: ["ES6", "ECMAScript 2015"]
+tag: ["ES6", "ECMAScript 2015", "Escamscript 6", "ES6 Tutorials"]
 ---
 
 ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.

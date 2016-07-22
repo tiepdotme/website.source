@@ -1,0 +1,14 @@
+{% if page.work %}
+<div class="three ui buttons">
+  <a href="{{page.work.url}}" class="ui button">Project</a>
+
+  {% if page.work.github %}
+    <a href="{{page.work.github | prepend: "https://github.com/"}}" class="ui button">Specs</a>
+  {% endif %}
+
+  {% if page.work.client %}
+    <a href="{{page.work.client}}" class="ui button">Client</a>
+  {% endif %}
+</div>
+<div class="ui hidden divider"></div>
+{% endif %}

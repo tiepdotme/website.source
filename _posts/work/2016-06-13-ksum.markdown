@@ -6,9 +6,10 @@ date:   2016-06-13 11:19:48 +0530
 categories: ["Drupal"]
 images: ["ksum-1024.png", "ksum-front.png"]
 permalink: /work/kerala-startup-mission
-client:
-  name: Kerala Startup Mission
+work:
   url: https://startupmission.kerala.gov.in
+  client: https://startupmission.kerala.gov.in
+  github: KeralaStartupMission
 ---
 
 Kerala Startup Mission (KSUM) is India's first and successful Non Academic Business Incubator, hosted and housed inside Asia's Largest IT Park Technopark.

@@ -15,6 +15,7 @@ layout: default
     {% include opensource.html %}
   </div>
   <div class="ui six wide column">
+    {% include worklinks.html %}
     {% for image in page.images %}
     <a href="{{ image | prepend: "/assets/img/work/960/" | prepend: site.baseurl }}" data-lightbox="screns" data-title="{{ page.title }}" class="alightbox">
       <img class="ui top work aligned fluid image" src="{{ image | prepend: "/assets/img/work/460/" | prepend: site.baseurl }}" alt="{{ page.title }}">
@@ -22,14 +23,3 @@ layout: default
     {% endfor %}
   </div>
 </div>
-
-
-<!-- <div class="ui basic segment ">
-  <div class="ui breadcrumb">
-    <a class="section" href="/">Home</a>
-    <i class="right angle icon divider"></i>
-    <a class="section" href="/about/portfolio">Works</a>
-    <i class="right angle icon divider"></i>
-    <span class="active section">{{ page.title }}</span>
-  </div>
-</div> -->

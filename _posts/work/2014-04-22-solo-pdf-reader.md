@@ -6,7 +6,7 @@ date:   2016-06-13 11:19:48 +0530
 categories: ["Android"]
 images: ["solo-pdf-reader.png", "solo-pdf-reader-screen.png"]
 permalink: /work/solo-pdf-reader
-client:
+work:
   name: Solo PDF Reader
   url: https://play.google.com/store/apps/details?id=com.lrmobilabs.pdfreader
 ---

@@ -9,6 +9,7 @@ permalink: /work/pegke-loyalty
 work:
   url: https://pegke.com
   github: pegkeloyalty/merchant-api
+  client: https://lightrains.com
 ---
 
 Pegke Customer Loyalty & Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.

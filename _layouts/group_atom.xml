@@ -4,7 +4,6 @@ layout: post
 ---
 <a name="categories"></a>
 <h3>Categories</h3>
-
 <div class="row">
 	{% for category in site.categories %}
 		<div class="col-12 col-lg-12">
@@ -12,10 +11,8 @@ layout: post
 		</div>
 	{% endfor %}
 </div>
-
 <a name="tags"></a>
 <h3>Tags</h3>
-
 <div class="row">
 	{% for tag in site.tags %}
 		<div class="col-lg-3 col-sm-4 col-12">

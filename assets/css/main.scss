@@ -204,6 +204,7 @@ blockquote {
 .page-work {
   img {
     margin-bottom: $padsmall;
+    cursor: zoom-in;
   }
 }
 
@@ -345,6 +346,11 @@ pre.highlight, pre {
   .ui.horizontal.divider {
     white-space: normal !important;
     display: inline-block;
+  }
+  .secondary {
+    .item {
+      padding: 0 !important;
+    }
   }
 }
 

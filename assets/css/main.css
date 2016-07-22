@@ -117,7 +117,8 @@ blockquote {
   font-style: italic; }
 
 .page-work img {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  cursor: zoom-in; }
 
 .page-default .masthead {
   min-height: 400px; }
@@ -227,7 +228,10 @@ pre.highlight, pre {
 
   .ui.horizontal.divider {
     white-space: normal !important;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .secondary .item {
+    padding: 0 !important; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   [class*="mobile only"]:not(.tablet),
   [class*="tablet hidden"],

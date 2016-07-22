@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
   jQuery('.dropdown').dropdown();
-  $('.logoo').popup();
   $('.special.cards .image').dimmer({on: 'hover'});
   $('.ui.embed').embed();
 

@@ -6,9 +6,9 @@ date:   2016-06-13 11:19:48 +0530
 categories: Drupal
 images: ["metromatinee_logo.png", "metromatinee_home.jpg"]
 permalink: /work/metromatinee
-client:
-  name: TBF Technology Private Limited
+work:
   url: http://metromatinee.com
+  client: http://www.tbfgolive.com
 ---
 
 MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.

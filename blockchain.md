@@ -5,7 +5,7 @@ permalink: /consulting/blockchain-consulting
 date:   2016-06-13 11:19:48 +0530
 ---
 
-Organisations realize that Blockchain technologies have the potential to disrupt their industries and permanently alter the competitive landscape. However, many are struggling to understand the core concepts and the opportunities that these may present for their given business model. Our experienced team of payments professionals, blockchain specialists and seasoned consultants can help you to navigate this new world.
+Firms realize that Blockchain systems potentially have to disrupt their industries and permanently adjust the competitive landscape. Even so, many are struggling to understand the core ideas and the opportunities the particular may present for their given business model. Each of our experienced team of obligations professionals, blockchain specialists and seasoned consultants can help you to navigate this new world.
 
 ## Blockchain Consulting
 Solutions for companies to approach commerce, trading, transparency, security, identification, supply chain, auditing systems powered by blockchain and smart contracts. We focus mainly on the Blockchain and smart contracts; offering the following as our key bread & butter services:
