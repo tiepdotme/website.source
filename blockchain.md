@@ -21,24 +21,32 @@ Solutions for companies to approach commerce, trading, transparency, security, i
 
 ### Through a mature and tested consultancy framework, We can offer a range of services to our customer.
 
-**Education**  
+**Education**
 Bring stakeholders within your organisation to a common level of understanding needed to fully appreciate the blockchain opportunity.
 
-**Strategy**  
+**Strategy**
 Professional advice and strategy formulation to guide your organisation through this brave new blockchain world.
 
-**Project Management**  
+**Project Management**
 Consulting on how to manage your approach to Blockchain adoption, including technology selection, recruitment and legal advice.
 
-**Development**  
+**Development**
 Unique platform and decentralized application development services on blockchain platforms such as Ethereum, Multichain, Openchain, and of course Bitcoin.
 
-**Integrity**  
+**Integrity**
 We provide clear understanding of where blockchains genuinely add value and help you identify appropriate challenges that can be addressed.
 
 > The blockchain era is just at its beginning but most Fortune 500 companies have already prepared for the disruption to come.
 
 
 Give us a call and we will help you develop blockchain applications specific to your engineering business methods.  We understand the technology, the platforms, and the developers. Settlement, government, banking, and insurance are all beneficiaries of blockchain applications adjudicated by professional engineers.
+
+## Read our articles about Blockchain
+<a href="/tag/blockchain/" title="Blogs Tagged Blockchain">Blockchain</a>
+<a href="/tag/dag/" title="Blogs Tagged DAG">DAG</a>
+<a href="/tag/principles/" title="Blogs Tagged Blockchain Principles">Principles</a>
+<a href="/tag/bitcoin/" title="Blogs Tagged Bitcoin">Bitcoin</a>
+<a href="/tag/ethereum/" title="Blogs Tagged ethereum">Ethereum</a>
+<a href="/tag/cryptocurrency/" title="Blogs Tagged cryptocurrency">Cryptocurrency</a>
 
 {% include cta.html %}
