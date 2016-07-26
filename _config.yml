@@ -22,7 +22,7 @@ address: G3B, Thejaswini, Technopark Campus, Trivandrum, 695581
 phone:  91 471 4000056
 
 # Build settings
-markdown: kramdown
+maRkdown: kramdown
 permalink: :title
 
 # Handling Reading
@@ -35,6 +35,7 @@ exclude:      [
   "gulpfile.js",
   "semantic.json",
   "README.md",
+  "assets/raw",
   ".gulp-scss-cache",
   "assets/css/lightbox.min.css",
   "assets/css/main.css",
