@@ -3,9 +3,10 @@ layout: post
 title: Blockchain Consulting & Development
 permalink: /consulting/blockchain-consulting
 date:   2016-06-13 11:19:48 +0530
+excerpt: "We offer Blockchain Consulting as well as Blockchain developement services for other companies to cop up with industry standards."
 ---
 
-Firms realize that Blockchain systems potentially have to disrupt their industries and permanently adjust the competitive landscape. Even so, many are struggling to understand the core ideas and the opportunities the particular may present for their given business model. Each of our experienced team of obligations professionals, blockchain specialists and seasoned consultants can help you to navigate this new world.
+Companies realize that Blockchain systems potentially have to disrupt their industries and permanently adjust the competitive landscape. Even so, many are struggling to understand the core ideas and the opportunities the particular may present for their given business model. Each of our experienced team of obligations professionals, blockchain specialists and seasoned consultants can help you to navigate this new world.
 
 ## Blockchain Consulting
 Solutions for companies to approach commerce, trading, transparency, security, identification, supply chain, auditing systems powered by blockchain and smart contracts. We focus mainly on the Blockchain and smart contracts; offering the following as our key bread & butter services:
@@ -36,7 +37,7 @@ Unique platform and decentralized application development services on blockchain
 **Integrity**
 We provide clear understanding of where blockchains genuinely add value and help you identify appropriate challenges that can be addressed.
 
-> The blockchain era is just at its beginning but most Fortune 500 companies have already prepared for the disruption to come.
+> The blockchain era is just at its beginning but most Fortune 500 companies have already prepared for the Blockchain disruption to come.
 
 
 Give us a call and we will help you develop blockchain applications specific to your engineering business methods.  We understand the technology, the platforms, and the developers. Settlement, government, banking, and insurance are all beneficiaries of blockchain applications adjudicated by professional engineers.

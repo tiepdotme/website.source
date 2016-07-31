@@ -39,6 +39,12 @@
     {% assign meta = site.masthead | prepend: "Blockchain Consulting & Development. " | strip %}
   {% endif %}
 
+  {% if page.excerpt %}
+    {% assign meta =  page.excerpt | strip_html | strip_newlines | strip %}
+  {% else %}
+    {% assign meta = page.content | strip_html | strip_newlines | strip %}
+  {% endif %}
+
   {% assign cleanMeta = meta | slugify | replace: "-", " " | capitalize | truncate: 160, "" %}
   <meta name="description" content="{{ cleanMeta }}">
 

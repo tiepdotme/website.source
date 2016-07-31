@@ -5,6 +5,7 @@ date: 2016-07-29 12:23:22 +0530
 tag: ["Bitcoin", "Blockchain", "Cryptocurrency"]
 permalink: /blogs/intriguing-qualities-of-bitcoin
 meta: qualities-of-bitcoin.png
+author: niksmac
 subtitle: "The true names of buyers and sellers are never revealed."
 ---
 Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org.Some of Bitcoin's Most Intriguing Qualities
