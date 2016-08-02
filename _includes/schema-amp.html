@@ -11,7 +11,7 @@
   "sameAs": "{{ page.url | remove:'/amp' | prepend: site.baseurl | prepend: site.url }}",
   "image": {
     "@type": "ImageObject",
-    "url": "{{ site.logo | prepend:"/" | prepend: site.url }}",
+    "url": "{{ page.meta | prepend:"/assets/img/blog/" | prepend: site.url }}",
     "height": 1000,
     "width": 700
   },

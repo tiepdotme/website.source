@@ -14,9 +14,11 @@
   {% endif %}
 
   {% if page.grouptype == 'tag' %}
-    {% assign pageTitle = page.tag | append: " Articles" %}
+    {% assign thistag = page.tag | replace: " ", "" %}
+    {% assign pageTitle = page.tag | append: " Articles | #" | append: thistag %}
   {% elsif page.grouptype == 'category' %}
-    {% assign pageTitle = page.category | append: " Articles" %}
+    {% assign thiscat = page.category | replace: " ", "" %}
+    {% assign pageTitle = page.category | append: " Articles | #" | append: thiscat %}
   {% endif %}
 
   {% if page.url == '/' %}
@@ -24,7 +26,7 @@
   {% endif %}
 
   {% if page.layout == 'blog' %}
-    {% assign pageTitle = page.title %}
+    {% assign pageTitle = page.title | append: " #" | append: page.tag[0]%}
   {% endif %}
 
   <title>{{ pageTitle | trim }}</title>

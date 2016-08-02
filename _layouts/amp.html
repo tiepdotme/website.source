@@ -5,7 +5,7 @@
   <title>{{ page.title }}</title>
   <link rel="canonical" href="{{ page.canonical_url | prepend: site.baseurl | prepend: site.url }}" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400|Merriweather:400&subset=latin" rel="stylesheet" type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400&subset=latin" rel="stylesheet" type='text/css'>
   {% include amp-css.html %}
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   {% include schema.html %}
@@ -15,6 +15,13 @@
   {% capture header %}{% include head.html %}{% endcapture %}
   {% include amp-menu.html %}
   <h1 class="post-title ui header huge" itemprop="name headline" title="{{ page.title }}">{{ page.title }}</h1>
+
+  <amp-img
+  src="/assets/img/blog/{{ page.meta }}"
+  alt="{{ page.title }}" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive"
+  ></amp-img>
+
   <div class="content">
     <span class="timespan">
       {{ page.date | date: "%a, %b %d, %y" }}
@@ -33,7 +40,4 @@
     </ul>
   </div>
 </body>
-
-
-
 </html>
