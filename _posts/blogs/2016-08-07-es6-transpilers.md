@@ -2,7 +2,7 @@
 layout: blog
 title: ES6 Transpilers
 date: 2016-08-07 05:10:00 +0530
-tag: ["ES6", "Transpiler"]
+tag: ["ES6", "Transpiler", "Ecmascipt 6"]
 permalink: /blogs/es6-transpilers
 meta: es6-transpilers.png
 author: niksmac

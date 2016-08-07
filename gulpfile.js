@@ -7,6 +7,7 @@ var concat = require("gulp-concat");
 var sass = require('gulp-ruby-sass');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
+var newer = require('gulp-newer');
 
 gulp.task('default', function () {
   return gulp.src('assets/semantic/dist/*.css')
@@ -97,30 +98,36 @@ gulp.task('minify', function () {
 // Create Images
 gulp.task('images', function() {
   gulp.src('assets/raw/work/*.{jpg,jpeg,png}')
+  .pipe(newer('assets/img/work/460'))
   .pipe(imageResize({
     width : 460,
     crop : false,
     imageMagick: true,
-    upscale : false
+    upscale : false,
+    sharpen: 1
   }))
   .pipe(gulp.dest('assets/img/work/460')),
 
   gulp.src('assets/raw/work/*.{jpg,jpeg,png}')
+  .pipe(newer('assets/img/work/960'))
   .pipe(imageResize({
     width : 960,
     crop : false,
     imageMagick: true,
-    upscale : false
+    upscale : false,
+    sharpen: 1
   }))
   .pipe(gulp.dest('assets/img/work/960')),
 
   gulp.src('assets/raw/blog/*.{jpg,jpeg,png}')
+  .pipe(newer('assets/img/blog'))
   .pipe(imageResize({
-    width : 600,
-    height : 340,
+    width : 700,
+    height : 420,
     crop : true,
     imageMagick: true,
-    upscale : false
+    upscale : false,
+    sharpen: 1
   }))
   .pipe(gulp.dest('assets/img/blog'))
 });
