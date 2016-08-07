@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
   jQuery('.dropdown').dropdown();
-  $('.special.cards .image').dimmer({on: 'hover'});
   $('.ui.embed').embed();
 
   $('#mobmenu').on('click', function(e) {
