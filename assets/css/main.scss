@@ -13,7 +13,7 @@ $offw: $bodyoff;
 $white: #fff;
 
 $secondFont: "Merriweather Sans", sans-serif;
-$firstFont: "Merriweather", sans-serif;
+$firstFont: "Merriweather Sans", sans-serif;
 
 @mixin grayScale($pos) {
   -webkit-filter: grayscale($pos);
@@ -146,6 +146,7 @@ h2 {
 
   p {
     text-justify: inter-character;
+    line-height: 1.75em !important;
   }
 }
 
@@ -418,4 +419,12 @@ code {
   padding: 1px 2px;
   border-radius: 2px;
   color: $white;
+}
+
+.catsntags {
+  .ui.black.labels {
+    a.label {
+      text-shadow: none !important;
+    }
+  }
 }

@@ -6,6 +6,7 @@ date:   2016-06-13 11:19:48 +0530
 meta: photo-1453834190665-46ff0a1fbd5a.jpeg
 author: niksmac
 permalink: /blogs/what-is-bitcoin-currency
+tag: ["Bitcoin", "Principles", "Cryptocurrency"]
 ---
 
 
@@ -21,6 +22,40 @@ A software developer called Satoshi Nakamoto proposed bitcoin, which was an elec
 
 ## Why Bitcoins?
 Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.
+
+
+## Characteristics of Bitcoin
+ - Decentralized
+ - Easy to set up
+ - Anonymous
+ - Transparent
+ - Minimal Transaction fee
+ - Fast transaction
+ - Non-repudiable
+
+## How does one acquire bitcoins?
+
+ - As payment for goods or services.
+ - Purchase bitcoins at a Bitcoin exchange.
+ - Exchange bitcoins from anyone.
+ - Earn bitcoins through mining.
+
+## Advantage/Disadvantage of Bitcoin
+
+### Advantages:
+
+ - Payment Freedom:- It is possible to send and receive bitcoins anywhere in the world at any time
+ - Less transaction Fees:- No fee to receive bitcoins. You can choose your transaction fee and many wallets let you control how large a fee to pay when spending.
+ - Risk Free:- Bitcoin transactions are secure, irreversible, and do not contain customers’ sensitive or personal information.
+ - Highly secured:- Bitcoin payments can be made without personal information tied to the transaction thus offers strong protection against identity theft.
+ - Neutral and Transparent:- All information about the Bitcoin money supply is available on the block chain and anybody can verify and use in real-time.
+
+### Disadvantages:
+
+ - Degree Of Acceptance:- Many people are still unaware of Bitcoin.
+ - Volatility:- The price of the Bitcoin is volatile, it varies as per time.
+ - Ongoing Development:- Bitcoin is still in the process of maturing.
+
 
 ### Video by WeUseCoins
 <div class="ui embed" data-source="youtube" data-id="Gc2en3nHxA4"></div>

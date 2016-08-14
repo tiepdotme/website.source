@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: What Is Bitcoin and how is it useful
-date: 2016-08-07 05:10:00 +0530
+date: 2016-08-09 05:10:00 +0530
 tag: ["Bitcoin", "Cryptocurrency"]
 permalink: /blogs/bitcoin-how-is-useful
 meta: acquire-of-bitcoin.png
