@@ -137,7 +137,7 @@
 .ui.items > .item > .content > .header {
   display: inline-block;
   margin: -0.3em 0em 0em;
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', 'sans-serif, Helvetica Neue', Arial, Helvetica;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }

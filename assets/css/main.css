@@ -9,7 +9,7 @@ body {
   font-family: "Merriweather Sans", sans-serif; }
 
 h1, h3, h4, h5 {
-  font-family: "Merriweather", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   word-spacing: -0.125em; }
 
 h2 {
@@ -82,7 +82,8 @@ h2 {
 .page-text .author {
   font-style: italic; }
 .page-text p {
-  text-justify: inter-character; }
+  text-justify: inter-character;
+  line-height: 1.75em !important; }
 
 .footer {
   padding: 2.5rem 0; }
@@ -279,3 +280,6 @@ code {
   padding: 1px 2px;
   border-radius: 2px;
   color: #fff; }
+
+.catsntags .ui.black.labels a.label {
+  text-shadow: none !important; }

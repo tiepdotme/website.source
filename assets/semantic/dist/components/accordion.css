@@ -32,7 +32,7 @@
 /* Default Styling */
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', 'sans-serif, Helvetica Neue', Arial, Helvetica;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.87);
 }

@@ -6,11 +6,11 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Merriweather';
+@fontName          : 'Merriweather Sans';
 @fontSmoothing     : antialiased;
 
-@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@headerFont        : @fontName, 'sans-serif, Helvetica Neue', Arial, Helvetica;
+@pageFont          : @fontName, 'sans-serif, Helvetica Neue', Arial, Helvetica;
 
 @googleFontName    : @fontName;
 @importGoogleFonts : true;

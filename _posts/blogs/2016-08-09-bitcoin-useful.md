@@ -8,8 +8,6 @@ meta: acquire-of-bitcoin.png
 author: amal
 ---
 
-# What Is Bitcoin and how is it useful.
-
 Bitcoin is a decentralized digital currency, created and held electronically. No one controls it. They're not printed, produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
 
 Satoshi Nakamoto, a software developer proposed bitcoin, which was an electronic payment system based on mathematical proof. Idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.

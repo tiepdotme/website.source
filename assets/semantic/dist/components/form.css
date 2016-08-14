@@ -98,7 +98,7 @@
 .ui.form input[type="time"],
 .ui.form input[type="text"],
 .ui.form input[type="url"] {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', 'sans-serif, Helvetica Neue', Arial, Helvetica;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;

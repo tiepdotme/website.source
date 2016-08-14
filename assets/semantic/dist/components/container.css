@@ -101,7 +101,7 @@
 
 /* Text Container */
 .ui.text.container {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', 'sans-serif, Helvetica Neue', Arial, Helvetica;
   max-width: 700px !important;
   line-height: 1.5;
 }
