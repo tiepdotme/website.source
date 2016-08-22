@@ -3,7 +3,7 @@ layout: post
 title: Blockchain Consulting & Development
 permalink: /consulting/blockchain-consulting
 date:   2016-06-13 11:19:48 +0530
-excerpt: "We offer Blockchain Consulting as well as Blockchain developement services for other companies to cop up with industry standards."
+excerpt: "Blockchain Consulting and Blockchain development services for companies."
 ---
 
 Companies realize that Blockchain systems potentially have to disrupt their industries and permanently adjust the competitive landscape. Even so, many are struggling to understand the core ideas and the opportunities the particular may present for their given business model. Each of our experienced team of obligations professionals, blockchain specialists and seasoned consultants can help you to navigate this new world.
@@ -23,7 +23,7 @@ Solutions for companies to approach commerce, trading, transparency, security, i
 ### Through a mature and tested consultancy framework, We can offer a range of services to our customer.
 
 **Education**
-Bring stakeholders within your organisation to a common level of understanding needed to fully appreciate the blockchain opportunity.
+Bring stakeholders within your organization to a common level of understanding needed to fully appreciate the blockchain opportunity.
 
 **Strategy**
 Professional advice and strategy formulation to guide your organisation through this brave new blockchain world.

@@ -7,7 +7,7 @@ title: Team behind the Scene
 # Team behind the Scene
 
 <div class="ui four column stackable grid">
-  {% for thisAuthor in site.data.team | limit:3 %}
+  {% for thisAuthor in site.data.team limit:3 %}
   <div class="column">
     <div class="ui fluid card">
       <div class="image">
@@ -30,7 +30,7 @@ title: Team behind the Scene
 <div class="ui divider"></div>
 <div class="ui four column stackable grid">
 
-  {% for thisAuthor in site.data.team | offset:3 %}
+  {% for thisAuthor in site.data.team offset:3 %}
   <div class="column">
     <div class="ui fluid card">
       <div class="image">
