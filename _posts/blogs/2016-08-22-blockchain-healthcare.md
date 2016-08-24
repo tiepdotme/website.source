@@ -7,6 +7,7 @@ permalink: /blogs/blockchain-for-healthcare-usecase
 meta: blockchain-for-healthcare-usecase.png
 author: pramod
 subtitle: Healthcare data is held in a centralized, privately-controlled  location.
+published: false
 ---
 
 The healthcare providers in the entire world offers high-end technologies for analyzing and determining a particular disease. But there are certain key problems which are need to be rectified in the healthcare industry.
