@@ -6,6 +6,8 @@ date:   2016-06-13 11:19:48 +0530
 meta: Ethereum-homestead-background-27.jpg
 author: niksmac
 permalink: /blogs/setup-local-ethereum-blockchain-private-testnet
+tag: ["Private Blockchain", "Blockchain", "Ethereum", "Testnet"]
+
 ---
 
 

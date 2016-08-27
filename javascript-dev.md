@@ -10,17 +10,20 @@ We're looking for experienced full-time developers to join our core team who hav
 
 ## Necessary skills and experience
  * Write maintainable, testable, and performant JavaScript
- * Familiarity with modern frontend build tooling, including Babel/Webpack
+ * Familiarity with modern front-end build tooling, including Babel/Webpack
  * Knowledge of visualization and associated libraries (SVG, Canvas, WebGL, D3, Three.js, etc.)
  * have significant experience with REST APIs and thoroughly understand HTTP requests
  * Fluency in modern JavaScript (ES6/7, Node)
 
 ## Bonus Points if you,   
- * have contributed open source code (core or plugins) for a popular frontend framework such as Backbone, Angular, or React
+ * have contributed open source code (core or plugins) for a popular front-end framework such as Backbone, Angular, or React
 
 ## How to Apply   
-In addition to a resume, please include a short explanation of your background, accomplishments (links to past projects are always helpful), and what excites you about Lightrains. This will help us to get a multi-dimensional view of who you are and connect you with the right person at Lightrains.
 
-Please email a cover letter and resume to with "JavaScript Engineer" in the subject line to {% include email.html param="link" variable-param=page.variable %}. No phone calls please.
+ 1. Fork [this](https://github.com/lightrainstech/join-us.git) repository.
+ 2. Read questions in `questions.md`
+ 3. Create a new file, name it `answers.md`
+ 4. Submit a `Pull Request` once you're finish with all the questions.
+
 
 *Only applicants invited to interview will be contacted.*

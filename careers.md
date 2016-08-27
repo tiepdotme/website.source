@@ -22,7 +22,6 @@ date:   2016-06-13 11:19:48 +0530
         <li class="item">Build and Promote Great Technology</li>
         <li class="item">Work with Brilliant People</li>
         <li class="item">Work in the interesting new technologies</li>
-        <li class="item">Explore the Ethereum Blockchain</li>
       </ul>
       <div class="ui hidden big divider"></div>
 
@@ -34,7 +33,18 @@ date:   2016-06-13 11:19:48 +0530
           <div class="item"><a href="{{ post.url }}">{{ post.title }}</a></div>
         {% endfor %}
       </div>
-      
+
+      <h2>How to Apply?</h2>
+      <p>If you're applying for a developer position, then there is an easy way for you to apply. Check <a href="https://github.com/lightrainstech/join-us.git">this GitHub Repo</a> </p>
+      <ul>
+       <li>Fork <a href="https://github.com/lightrainstech/join-us.git">this repository.</a></li>
+       <li>Read questions in `questions.md`</li>
+       <li>Create a new file, name it `answers.md`</li>
+       <li>Submit a `Pull Request` once you're finish with all the questions.</li>
+      </ul>
+
+
+
     </div>
     <div class="column six wide">
       <img src="/assets/img/lightrains-team.jpg" alt="{{ site.title }} Team" class="ui image lazy fluid" />
