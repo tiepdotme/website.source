@@ -26,7 +26,8 @@
   {% endif %}
 
   {% if page.layout == 'blog' %}
-    {% assign pageTitle = page.title | append: " #" | append: page.tag[0]%}
+    {% assign hashtag = page.tag[0] | replace: " ", "" %}
+    {% assign pageTitle = page.title | append: " #" | append: hashtag %}
   {% endif %}
 
   <title>{{ pageTitle | trim }}</title>
