@@ -1,24 +1,24 @@
 ---
 layout: blog
 title:  "What is Ethereum"
-subtitle: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi"
-date:   2016-06-13 11:19:48 +0530
-meta: photo-1433878455169-4698e60005b1.jpeg
+subtitle: "Ethereum is a public blockchain-based distributed computing platform, featuring smart contract functionality."
+date: 2016-06-13 11:19:48 +0530
+meta: ethereum-overtakes-litecoin.jpg
 author: niksmac
 permalink: /blogs/what-is-ethereum
-
+tag: ["Ethereum", "Cryptocurrency"]
 ---
 
+Ethereum is a public blockchain-based distributed computing platform, featuring smart contract functionality. It provides a decentralized virtual machine, the Ethereum Virtual Machine (EVM), that can execute peer-to-peer contracts using a cryptocurrency called ether.
 
-Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
 
+* Applications build with Ethereum do not cover all use cases of course, but have specific properties that make them unique:
+* Ethereum applications always execute the code they say they will - there is no 'security through obscurity'. I don't need to 'trust' anything or anyone, because I can check the app code myself.
+* Ethereum applications are always available, and are guaranteed to be available in the future. There is no downtime.
+Ethereum applications are resistant to many attacks including denial of service (DDoS), which are rendered moot.
 
-## What makes it different from normal currencies?
+**Important links**
+ * [ethereum.org](https://www.ethereum.org)
+ * [wiki](https://en.wikipedia.org/wiki/Ethereum)
 
-Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.
-
-However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.
-
-## Who created it?
-
-A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.
+![What is Ethereum](/assets/img/blog/what-is-ethereum.png){: .ui .image .fluid}

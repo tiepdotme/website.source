@@ -13,7 +13,6 @@
     {% assign pageTitle = page.title | append: ' ⚡️ ' | append: site.title%}
   {% endif %}
 
-
   {% if page.grouptype == 'tag' %}
     {% assign thistag = page.tag | replace: " ", "" %}
     {% assign pageTitle = page.tag | append: " Articles Tagged #" | append: thistag %}
@@ -39,8 +38,8 @@
     {% assign meta = site.masthead %}
   {% endif %}
 
-  {% if page.url == "/" %}
-    {% assign meta = site.masthead | prepend: "Blockchain Consulting & Development. " | strip %}
+  {% if page.url contains '/blogs/' %}
+    {% assign meta = "Blogs - Explaining Blockchain, React, ES6, javascript and what not." %}
   {% endif %}
 
   {% if page.excerpt %}
@@ -49,13 +48,15 @@
     {% assign meta = page.content | strip_html | strip_newlines | strip %}
   {% endif %}
 
-
   {% if page.grouptype == 'tag' %}
-    {% assign meta = page.tag | append: " all posts under Tag " | append: page.tag %}
+    {% assign meta = page.tag | append: ", all posts under Tag " | append: page.tag %}
   {% elsif page.grouptype == 'category' %}
-    {% assign meta = page.category | append: " all posts under Category " | append: page.category %}
+    {% assign meta = page.category | append: ", all posts under Category " | append: page.category %}
   {% endif %}
 
+  {% if page.url == "/" %}
+    {% assign meta = site.masthead | prepend: "Blockchain Consulting and Development. " | strip %}
+  {% endif %}
 
   {% assign cleanMeta = meta | slugify | replace: "-", " " | capitalize | truncate: 160, "" %}
 
@@ -82,13 +83,9 @@
   <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% endif %}
 
-
-
-
   {% if page.url == "/404.html" %}
   <meta http-equiv="refresh" content="3; url=/">
   {% endif %}
-
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">

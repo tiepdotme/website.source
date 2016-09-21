@@ -3,7 +3,7 @@ layout: blog
 title:  "What is Bitcoin the currency"
 subtitle: "Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally."
 date:   2016-06-13 11:19:48 +0530
-meta: photo-1453834190665-46ff0a1fbd5a.jpeg
+meta: bitcoin-crypto-currency.jpg
 author: niksmac
 permalink: /blogs/what-is-bitcoin-currency
 tag: ["Bitcoin", "Principles", "Cryptocurrency"]
