@@ -13,12 +13,13 @@
     {% assign pageTitle = page.title | append: ' ⚡️ ' | append: site.title%}
   {% endif %}
 
+
   {% if page.grouptype == 'tag' %}
     {% assign thistag = page.tag | replace: " ", "" %}
-    {% assign pageTitle = page.tag | append: " Articles | #" | append: thistag %}
+    {% assign pageTitle = page.tag | append: " Articles Tagged #" | append: thistag %}
   {% elsif page.grouptype == 'category' %}
     {% assign thiscat = page.category | replace: " ", "" %}
-    {% assign pageTitle = page.category | append: " Articles | #" | append: thiscat %}
+    {% assign pageTitle = page.category | append: " Articles in Category #" | append: thiscat %}
   {% endif %}
 
   {% if page.url == '/' %}
@@ -33,7 +34,7 @@
   <title>{{ pageTitle | trim }}</title>
 
   {% if page.content %}
-    {% assign meta =  page.content | strip_html | strip_newlines | strip %}
+    {% assign meta = page.content | strip_html | strip_newlines | strip %}
   {% else %}
     {% assign meta = site.masthead %}
   {% endif %}
@@ -43,12 +44,21 @@
   {% endif %}
 
   {% if page.excerpt %}
-    {% assign meta =  page.excerpt | strip_html | strip_newlines | strip %}
+    {% assign meta = page.excerpt | strip_html | strip_newlines | strip %}
   {% else %}
     {% assign meta = page.content | strip_html | strip_newlines | strip %}
   {% endif %}
 
+
+  {% if page.grouptype == 'tag' %}
+    {% assign meta = page.tag | append: " all posts under Tag " | append: page.tag %}
+  {% elsif page.grouptype == 'category' %}
+    {% assign meta = page.category | append: " all posts under Category " | append: page.category %}
+  {% endif %}
+
+
   {% assign cleanMeta = meta | slugify | replace: "-", " " | capitalize | truncate: 160, "" %}
+
   <meta name="description" content="{{ cleanMeta }}">
 
   <script type="text/javascript">
