@@ -8,6 +8,8 @@ var sass = require('gulp-ruby-sass');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var newer = require('gulp-newer');
+var runSequence  = require('run-sequence');
+var watch = require('gulp-watch');
 
 gulp.task('default', function () {
   return gulp.src('assets/semantic/dist/*.css')
@@ -161,4 +163,8 @@ gulp.task('favicon', function() {
     }
   }))
   .pipe(gulp.dest("./assets/favicons/"));
+});
+
+gulp.task('watch', function () {
+  gulp.watch('./assets/css/*.scss', runSequence('sass', 'minify'));
 });

@@ -23,6 +23,12 @@ $firstFont: "Merriweather Sans", sans-serif;
   filter: grayscale($pos);
 }
 
+@mixin round($rad) {
+  -moz-border-radius: $rad / $rad;
+  -webkit-border-radius: $rad $rad;
+  border-radius: $rad / $rad;
+}
+
 html {
   background-color: $bg;
 }
@@ -413,18 +419,32 @@ pre.highlight, pre {
     text-decoration: none !important;
   }
 }
-
 code {
   background: $bodyoff;
   padding: 1px 2px;
   border-radius: 2px;
   color: $white;
 }
-
 .catsntags {
   .ui.black.labels {
     a.label {
       text-shadow: none !important;
     }
+  }
+}
+.ui.white.header {
+  color: #FFF;
+}
+.cta-blog {
+  background-color: $body;
+  min-height: 150px;
+  margin: 15px 0;
+  padding: 10px;
+  text-align: center;
+  @include round(3px);
+
+  a.ui.button.big.black.obsa {
+    background: #FFF;
+    color: #000;
   }
 }

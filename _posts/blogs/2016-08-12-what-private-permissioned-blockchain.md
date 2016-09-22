@@ -28,3 +28,6 @@ We must also consider the relative advantages which permissioned blockchain netw
 
 **Sources**
  1. [https://docs.erisindustries.com](https://docs.erisindustries.com/explainers/permissioned_blockchains/)
+
+
+{% include cta-blog.html %}

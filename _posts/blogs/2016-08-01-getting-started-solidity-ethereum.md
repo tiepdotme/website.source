@@ -43,3 +43,6 @@ address: Holds a 20 byte value (size of an Ethereum address). Address types also
 
  1. [Official Docs](http://solidity.readthedocs.io/en/latest/)
  2. [Types](http://solidity.readthedocs.io/en/latest/types.html)
+
+
+{% include cta-blog.html %}

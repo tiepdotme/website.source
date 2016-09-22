@@ -283,3 +283,19 @@ code {
 
 .catsntags .ui.black.labels a.label {
   text-shadow: none !important; }
+
+.ui.white.header {
+  color: #FFF; }
+
+.cta-blog {
+  background-color: #292724;
+  min-height: 150px;
+  margin: 15px 0;
+  padding: 10px;
+  text-align: center;
+  -moz-border-radius: 1;
+  -webkit-border-radius: 3px 3px;
+  border-radius: 1; }
+  .cta-blog a.ui.button.big.black.obsa {
+    background: #FFF;
+    color: #000; }

@@ -104,3 +104,5 @@ When working with the local Blockchain, we need the run a Miner in order to have
 ```
 geth --mine -rpccorsdomain "*" --ipcapi "admin,eth,miner" --rpcapi "eth,web3" --networkid 1100 -maxpeers 5 --minerthreads 1
 ```
+
+{% include cta-blog.html %}
