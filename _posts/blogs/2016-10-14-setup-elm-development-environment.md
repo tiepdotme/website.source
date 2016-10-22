@@ -16,6 +16,9 @@ Elm is a language that compiles to JavaScript, or in other words, Elm is a langu
 ## Why we need Elm?
 Elm is a programming language for declaratively creating web browser-based graphical user interfaces. Elm is `purely functional`, and is developed with emphasis on usability, performance, and robustness. It advertises "no runtime exceptions in practice", made possible by the Elm compiler's static type checking.
 
+## Update 22, Oct 2016.
+> I came across [Elm For Beginners](http://courses.knowthen.com/courses/enrolled/elm-for-beginners) amazing set of tutorials by [James Moore](https://github.com/knowthen), i would recommend watching it. Also his note on [Development Environment Setup Steps](https://github.com/knowthen/elm/blob/master/DEVSETUP.md)
+
 ## Features of Elm
 
 1. JavaScript Interop
