@@ -6,6 +6,7 @@ date:   2016-11-11 11:19:48 +0530
 categories: ["Blockchain", "Ethereum", "Smart Contract"]
 images: ["voting-blockchain-election-1.png", "voting-blockchain-election-2.png", "voting-blockchain-election-3.png", "voting-blockchain-election-4.png"]
 permalink: /work/liquid-voting-blockchain-election
+excerpt: This platform uses Ethereum as the Blockchain platform and Solidity Smart contracts to record the votes as well as elections in a tamper proof manner.
 work:
   name: Lightrains Tech
   url: https://liquidvoting.github.io
