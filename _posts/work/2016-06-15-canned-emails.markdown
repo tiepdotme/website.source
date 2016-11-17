@@ -3,7 +3,7 @@ layout: work
 title:  "Canned Emails"
 subtitle: "Open Source email template repository"
 date:   2016-06-13 11:19:48 +0530
-categories: ["Open Source", "Smart Contract"]
+categories: ["Open Source"]
 images: ["canned-emails.png", "canned-email-screen.png"]
 permalink: /work/canned-emails
 work:
