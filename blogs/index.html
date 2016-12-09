@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Blogs - Explaining Blockchain, React, ES6 and what not.
-excerpt: "Blogs - Explaining Blockchain, React, ES6 and what not."
+title: Blogs - Explaining Blockchain, Elm, ES6 and what not.
+excerpt: "Blogs - Explaining Blockchain, React, Elm, Elixir, ES6 and what not."
 ---
 
 {% include masthead.html %}
@@ -13,7 +13,7 @@ excerpt: "Blogs - Explaining Blockchain, React, ES6 and what not."
   {% assign meta = page.meta | prepend: "/assets/img/blog/" |  prepend: site.baseurl %}
   {% assign text = page.title | replace: ' ', '+' %}
   {% if page.meta == null %}
-  {% assign meta = "//placehold.it/400x200/009c95/ffffff?text=" | append: text | append: "&txtsize=26" %}
+  {% assign meta = page.images.first | prepend: "/assets/img/work/460/" |  prepend: site.baseurl %}
   {% endif %}
   {% capture loop_index %}{{ loop_index | plus:1 }}{% endcapture %}
 

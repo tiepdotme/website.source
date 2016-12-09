@@ -37,3 +37,23 @@ your current cursor position.
  - `set complete+=kspell` Enables spelling auto complete.
 
 ### Advanced Settings
+
+ - `set ruler` " Show row and column ruler information
+ - `set showtabline=0` " Show tab bar
+ - `set undolevels=200`  " Number of undo levels
+ - `set backspace=indent,eol,start`  " Backspace behaviours
+ - `filetype plugin on` Enables filetype detection along with plugins.
+ - `set tabstop=2` Set tabstop to tell vim 2 columns a tab counts for
+ - `set shiftwidth=2` Set number of space characters inserted for indentation
+ - `set shiftround` Round indent to multiple of 'shiftwidth'.
+ - `set expandtab` spaces to insert a <Tab>
+ - `set clipboard=unnamed` Use the system clipboard
+ - `set regexpengine=1` Enables regular expression engine
+ - `set autoread` Watch for file changes outside vim
+ - `set acd` Changes the working directory on each load `autochdir`
+ - `let mapleader = "\<Space>"` Map leader to Space bar
+ - `nnoremap <leader><leader> <C-^>` Switch buffers
+
+
+## Remember
+You can view the help text for any commands by running `:help COMMAND` eg; `:help regexpengine`
