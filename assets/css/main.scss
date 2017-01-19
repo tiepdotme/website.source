@@ -11,6 +11,7 @@ $bodyoff: #323232;
 $green: #2e8b38;
 $offw: $bodyoff;
 $white: #fff;
+$black: #333;
 
 $secondFont: "Merriweather Sans", sans-serif;
 $firstFont: "Merriweather Sans", sans-serif;
@@ -97,7 +98,7 @@ h2 {
 }
 
 .masthead {
-  padding: 5rem 0 4rem 0;
+  padding: 12rem 0;
 
   h1 {
     margin-bottom: 20px;
@@ -157,8 +158,6 @@ h2 {
 }
 
 .footer {
-  padding: $paddmed 0;
-
   .slogan {
     font-size: 12px;
   }
@@ -179,6 +178,9 @@ h2 {
 
   .label {
     font-weight: normal;
+  }
+  .header {
+    font-family: $secondFont;
   }
 
   .secondary.pointing.menu .item {
@@ -235,12 +237,15 @@ blockquote {
 
 .path-front {
   .footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     margin: 0 auto;
-    text-align: center;
-    padding-bottom: 10px;
+  }
+  .ui.header {
+    font-family: $secondFont;
+    font-weight: 300;
+  }
+  .ui.header>.icon {
+    vertical-align: top !important;
   }
 }
 
@@ -447,4 +452,21 @@ code {
     background: #FFF;
     color: #000;
   }
+}
+.techs {
+  padding: 40px 0;
+  background: #000000;
+  background: -moz-linear-gradient(top, #000000 0%, #333333 100%);
+  background: -webkit-linear-gradient(top, #000000 0%,#333333 100%);
+  background: linear-gradient(to bottom, #000000 0%,#333333 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 );
+  .row {
+    margin-bottom: 20px;
+  }
+}
+.techs.ui.container, .fullw .footer{
+  margin: 0 !important;
+}
+.footer.segment {
+  padding: 5em 0em;
 }

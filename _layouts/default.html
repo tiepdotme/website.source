@@ -39,7 +39,11 @@ layout: compress
     <div class="ui container">
       {{ content }}
     </div>
-    <div class="fullw mobile hidden">
+    {% if page.url == "/" %}
+      {% include technologies.html %}
+      {% include techstack.html %}
+    {% endif %}
+    <div class="fullw">
       <div class="ui container footer">
         {% include footer.html %}
       </div>
