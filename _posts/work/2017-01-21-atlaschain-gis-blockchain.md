@@ -28,9 +28,12 @@ Maps are a precious resource and location is a powerful way to visualise and und
 
 [More](https://github.com/atlaschain/atlas-design/wiki/Usage-Scenarios-for-Atlas-Chain)
 
+### Team
+This is an open source project built by [niksmac](https://github.com/niskmac), [kp666](https://github.com/kp666), [sibizulu](https://github.com/sibizulu),  [nikhilkrishna](https://github.com/nikhilkrishna) and [amalmkumar](https://github.com/amalmkumar)
+
 ### Links
 
 1. [Github](https://github.com/atlaschain)
 2. [Team](https://github.com/orgs/atlaschain/people)
-3. [Wiki](https://github.com/atlaschain/atlas-design/wiki) by [nikhilkrishna](https://github.com/nikhilkrishna), outside collaborator
-4. [Smart Contracts](https://github.com/atlaschain/contracts) by [kp666](https://github.com/kp666) outside collaborator
+3. [Wiki](https://github.com/atlaschain/atlas-design/wiki) by [nikhilkrishna](https://github.com/nikhilkrishna), collaborator
+4. [Smart Contracts](https://github.com/atlaschain/contracts) by [kp666](https://github.com/kp666) collaborator
