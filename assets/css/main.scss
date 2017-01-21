@@ -470,3 +470,12 @@ code {
 .footer.segment {
   padding: 5em 0em;
 }
+.path-inner {
+  .fullw .ui.container.footer{
+    margin: 0 auto !important;
+  }
+  .footers {
+    margin: 30px 0;
+    padding-bottom: 30px;
+  }
+}
