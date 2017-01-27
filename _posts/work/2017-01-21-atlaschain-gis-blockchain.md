@@ -35,5 +35,7 @@ This is an open source project built by [niksmac](https://github.com/niskmac), [
 
 1. [Github](https://github.com/atlaschain)
 2. [Team](https://github.com/orgs/atlaschain/people)
-3. [Wiki](https://github.com/atlaschain/atlas-design/wiki) by [nikhilkrishna](https://github.com/nikhilkrishna), collaborator
+3. [Wiki](https://github.com/atlaschain/atlas-design/wiki)
 4. [Smart Contracts](https://github.com/atlaschain/contracts) by [kp666](https://github.com/kp666) collaborator
+
+<div class="ui embed" data-source="youtube" data-id="DTowclFE8_4"></div>

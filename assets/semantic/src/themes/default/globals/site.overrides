@@ -1,3 +1,18 @@
 /*******************************
         Global Overrides
 *******************************/
+
+
+@fontName          : 'Merriweather+Sans';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, sans-serif;
+@pageFont          : @fontName, sans-serif;
+
+@googleFontSizes   : '300,400,700,400italic,700italic,800';
+
+@importGoogleFonts : false;
+
+
+@relativeBorderRadius: 0;
+@absoluteBorderRadius: 0;

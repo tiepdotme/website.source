@@ -13,8 +13,7 @@ $offw: $bodyoff;
 $white: #fff;
 $black: #333;
 
-$secondFont: "Merriweather Sans", sans-serif;
-$firstFont: "Merriweather Sans", sans-serif;
+$theFont: "Merriweather Sans", sans-serif;
 
 @mixin grayScale($pos) {
   -webkit-filter: grayscale($pos);
@@ -22,6 +21,9 @@ $firstFont: "Merriweather Sans", sans-serif;
   -ms-filter: grayscale($pos);
   -o-filter: grayscale($pos);
   filter: grayscale($pos);
+}
+.ui.button, h1, h2, h3, h4, h5 {
+    font-family: $theFont !important;
 }
 
 @mixin round($rad) {
@@ -39,18 +41,18 @@ body {
   background-color: $bg;
   color: $body;
   line-height: 2rem !important;
-  font-family: $secondFont;
+  font-family: $theFont;
 }
 
 h1, h3, h4, h5 {
-  font-family: $firstFont;
+  font-family: $theFont;
   word-spacing: -0.125em;
 }
 
 h2 {
   font-weight: 300;
   color: $bodyoff;
-  font-family: $secondFont;
+  font-family: $theFont;
 }
 
 body.night {
@@ -180,14 +182,17 @@ h2 {
     font-weight: normal;
   }
   .header {
-    font-family: $secondFont;
+    font-family: $theFont;
   }
 
   .secondary.pointing.menu .item {
-    font-family: $secondFont;
+    font-family: $theFont;
   }
-}
 
+}
+.ui.button {
+  font-weight: 300 !important;
+}
 a:not(.button) {
   color: #666 !important;
   text-decoration: none;
@@ -241,8 +246,12 @@ blockquote {
     margin: 0 auto;
   }
   .ui.header {
-    font-family: $secondFont;
-    font-weight: 300;
+    font-family: $theFont;
+    font-weight: 300 !important;
+    line-height: 1.4em !important;
+  }
+  .sub.header {
+    font-weight: 300 !important;
   }
   .ui.header>.icon {
     vertical-align: top !important;
@@ -469,6 +478,12 @@ code {
 }
 .footer.segment {
   padding: 5em 0em;
+  a:not(.button) {
+    color: #bbb !important;
+    &:hover {
+      color: #FFF !important;
+    }
+  }
 }
 .path-inner {
   .fullw .ui.container.footer{
@@ -478,4 +493,9 @@ code {
     margin: 30px 0;
     padding-bottom: 30px;
   }
+}
+
+::selection{
+  background-color: #000;
+  color: #FFF;
 }

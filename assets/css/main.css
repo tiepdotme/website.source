@@ -1,3 +1,6 @@
+.ui.button, h1, h2, h3, h4, h5 {
+  font-family: "Merriweather Sans", sans-serif !important; }
+
 html {
   background-color: #fafafa; }
 
@@ -101,6 +104,9 @@ h2 {
 .ui .secondary.pointing.menu .item {
   font-family: "Merriweather Sans", sans-serif; }
 
+.ui.button {
+  font-weight: 300 !important; }
+
 a:not(.button) {
   color: #666 !important;
   text-decoration: none; }
@@ -137,7 +143,10 @@ blockquote {
   margin: 0 auto; }
 .path-front .ui.header {
   font-family: "Merriweather Sans", sans-serif;
-  font-weight: 300; }
+  font-weight: 300 !important;
+  line-height: 1.4em !important; }
+.path-front .sub.header {
+  font-weight: 300 !important; }
 .path-front .ui.header > .icon {
   vertical-align: top !important; }
 
@@ -316,9 +325,17 @@ code {
 
 .footer.segment {
   padding: 5em 0em; }
+  .footer.segment a:not(.button) {
+    color: #bbb !important; }
+    .footer.segment a:not(.button):hover {
+      color: #FFF !important; }
 
 .path-inner .fullw .ui.container.footer {
   margin: 0 auto !important; }
 .path-inner .footers {
   margin: 30px 0;
   padding-bottom: 30px; }
+
+::selection {
+  background-color: #000;
+  color: #FFF; }
