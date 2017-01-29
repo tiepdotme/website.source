@@ -126,6 +126,9 @@ h2 {
 }
 
 .page-text {
+  a:not(.button) {
+    color: $green !important;
+  }
   a, .ui.list .list > .item a.header, .ui.list > .item a.header {
     text-decoration: none;
     position: relative;

@@ -69,6 +69,8 @@ h2 {
   display: block;
   clear: both; }
 
+.page-text a:not(.button) {
+  color: #2e8b38 !important; }
 .page-text a, .page-text .ui.list .list > .item a.header, .page-text .ui.list > .item a.header {
   text-decoration: none;
   position: relative;
