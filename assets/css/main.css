@@ -54,7 +54,7 @@ h2 {
   padding: 12rem 0; }
   .masthead h1 {
     margin-bottom: 20px;
-    font-weight: 400; }
+    font-weight: 700; }
   .masthead h2 {
     font-size: 1.6rem;
     line-height: 2.4rem; }
@@ -69,8 +69,6 @@ h2 {
   display: block;
   clear: both; }
 
-.page-text a:not(.button) {
-  color: #2e8b38 !important; }
 .page-text a, .page-text .ui.list .list > .item a.header, .page-text .ui.list > .item a.header {
   text-decoration: none;
   position: relative;
@@ -148,7 +146,8 @@ blockquote {
   font-weight: 300 !important;
   line-height: 1.4em !important; }
 .path-front .sub.header {
-  font-weight: 300 !important; }
+  font-weight: 300 !important;
+  line-height: 1.5em !important; }
 .path-front .ui.header > .icon {
   vertical-align: top !important; }
 
@@ -321,6 +320,8 @@ code {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=0 ); }
   .techs .row {
     margin-bottom: 20px; }
+  .techs h2 {
+    color: #fff !important; }
 
 .techs.ui.container, .fullw .footer {
   margin: 0 !important; }
@@ -341,3 +342,7 @@ code {
 ::selection {
   background-color: #000;
   color: #FFF; }
+
+.cuticon {
+  color: #fafafa;
+  padding-top: 20px; }

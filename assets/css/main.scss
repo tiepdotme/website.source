@@ -104,7 +104,7 @@ h2 {
 
   h1 {
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   h2 {
@@ -126,9 +126,7 @@ h2 {
 }
 
 .page-text {
-  a:not(.button) {
-    color: $green !important;
-  }
+
   a, .ui.list .list > .item a.header, .ui.list > .item a.header {
     text-decoration: none;
     position: relative;
@@ -255,6 +253,7 @@ blockquote {
   }
   .sub.header {
     font-weight: 300 !important;
+    line-height: 1.5em !important
   }
   .ui.header>.icon {
     vertical-align: top !important;
@@ -475,6 +474,9 @@ code {
   .row {
     margin-bottom: 20px;
   }
+  h2 {
+    color: $white !important;
+  }
 }
 .techs.ui.container, .fullw .footer{
   margin: 0 !important;
@@ -501,4 +503,8 @@ code {
 ::selection{
   background-color: #000;
   color: #FFF;
+}
+.cuticon {
+  color: $bg;
+  padding-top: 20px;
 }
