@@ -22,7 +22,7 @@
   {% endif %}
 
   {% if page.url == '/' %}
-    {% assign pageTitle = site.title %}
+    {% assign pageTitle = site.title | append: " - Blockchain Consulting" %}
   {% endif %}
 
   {% if page.layout == 'blog' %}
@@ -55,7 +55,7 @@
   {% endif %}
 
   {% if page.url == "/" %}
-    {% assign meta = site.masthead | prepend: "Blockchain Consulting and Development. " | strip %}
+    {% assign meta = site.masthead | prepend: "Blockchain Consulting and Development services. Leading Blockchain consultancy company. " | strip %}
   {% endif %}
 
   {% assign cleanMeta = meta | slugify | replace: "-", " " | capitalize | truncate: 160, "" %}
