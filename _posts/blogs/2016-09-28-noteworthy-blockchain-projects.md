@@ -63,3 +63,5 @@ Yours is a decentralized content sharing application where users will earn money
 Slock.it brings the benefits of the Blockchain transparency, security and auditablity to real-world objects. Slock.it is a German startup working on slocks; software based smart locks that can be controlled with a smartphone application.
 
 Slock.it is also working with RWE (Germany’s second largest utilities provider) on a smart contract powered electric vehicle charging platform, BlockCharge. They recently showcased a working prototype and will be testing the technology with real vehicles and stations over the next year.
+
+{% include cta-blog.html %}

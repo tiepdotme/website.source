@@ -70,10 +70,7 @@ h2 {
   clear: both; }
 
 .page-text a, .page-text .ui.list .list > .item a.header, .page-text .ui.list > .item a.header {
-  text-decoration: none;
-  position: relative;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  background-image: linear-gradient(to top, transparent, transparent 2px, #333333 2px, #333333 3px, transparent 3px); }
+  text-decoration: underline; }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .page-text a {
     background-image: linear-gradient(to top, transparent, transparent 2px, #333333 2px, #333333 2.5px, transparent 2.5px); } }
@@ -99,6 +96,8 @@ h2 {
   margin: 2rem 0; }
 .ui .label {
   font-weight: normal; }
+.ui .ui.endorsement.label {
+  line-height: 1.9; }
 .ui .header {
   font-family: "Merriweather Sans", sans-serif; }
 .ui .secondary.pointing.menu .item {
@@ -303,10 +302,7 @@ code {
   min-height: 150px;
   margin: 15px 0;
   padding: 10px;
-  text-align: center;
-  -moz-border-radius: 1;
-  -webkit-border-radius: 3px 3px;
-  border-radius: 1; }
+  text-align: center; }
   .cta-blog a.ui.button.big.black.obsa {
     background: #FFF;
     color: #000; }

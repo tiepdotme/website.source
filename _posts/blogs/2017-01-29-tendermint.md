@@ -52,3 +52,5 @@ The purpose of ABCI is to provide a clean interface between state transition mac
 1. [tendermint.com](https://tendermint.com)
 2. [ABCI App](https://tendermint.com/intro/getting-started/first-abci)
 3. [Tendermint](https://tendermint.com/intro)
+
+{% include cta-blog.html %}

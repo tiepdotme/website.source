@@ -26,12 +26,6 @@ $theFont: "Merriweather Sans", sans-serif;
     font-family: $theFont !important;
 }
 
-@mixin round($rad) {
-  -moz-border-radius: $rad / $rad;
-  -webkit-border-radius: $rad $rad;
-  border-radius: $rad / $rad;
-}
-
 html {
   background-color: $bg;
 }
@@ -128,10 +122,7 @@ h2 {
 .page-text {
 
   a, .ui.list .list > .item a.header, .ui.list > .item a.header {
-    text-decoration: none;
-    position: relative;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 3px, rgba(0, 0, 0, 0) 3px);
+    text-decoration: underline;
   }
 
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
@@ -181,6 +172,9 @@ h2 {
 
   .label {
     font-weight: normal;
+  }
+  .ui.endorsement.label{
+    line-height: 1.9;
   }
   .header {
     font-family: $theFont;
@@ -457,8 +451,6 @@ code {
   margin: 15px 0;
   padding: 10px;
   text-align: center;
-  @include round(3px);
-
   a.ui.button.big.black.obsa {
     background: #FFF;
     color: #000;
@@ -507,4 +499,8 @@ code {
 .cuticon {
   color: $bg;
   padding-top: 20px;
+}
+
+div.textarea {
+
 }
