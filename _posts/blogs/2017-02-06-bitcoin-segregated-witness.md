@@ -2,7 +2,7 @@
 layout: blog
 title: "What is Bitcoin Segregated Witness aka segwit"
 date: 2017-02-06 05:10:00 +0530
-tag: ["Segregated Witness", "Segwit", "Bitcoin", "UTXO"]
+tag: ["Segregated Witness", "Segwit", "Bitcoin", "UTXO", "Principles", "Blockchain"]
 permalink: /blogs/bitcoin-segregated-witness-segwit
 meta: bitcoin-segregated-witness-segwit.png
 author: niksmac
