@@ -32,7 +32,7 @@ Assume that we want to keep the data of applicants on the blockchain, well there
 
 **1. On the Blockchain as `meta` information**   
 
-Even though it is technically possible to do so, there are some limitations on the Blockchain itself like, file size and amount payable for the network to write the files onto the Blockchain. Because of these reasons we would look into either _[Private Permissioned Blockchain]({% post_url 2016-08-12-what-private-permissioned-blockchain %})_ or the _Save the file somewhere else and keep the hash on the blockchain_ method.
+Even though it is technically possible to do so, there are some limitations on the Blockchain itself like, file size and amount payable for the network to write the files onto the Blockchain. Because of these reasons we would look into either [Private Permissioned Blockchain](/blogs/what-private-permissioned-blockchain)_ or the _Save the file somewhere else and keep the hash on the blockchain_ method.
 
 **2. Save the Hash only**
 
