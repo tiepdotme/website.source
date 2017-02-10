@@ -16,12 +16,10 @@
       {% assign singleCategory = page.categories[forloop.index0] | capitalize | replace: " ", "" %}
       {% assign allTags = allTags | append: " " | append: singleCategory %}
     {% endfor %}
-
-
     <div class="work {{ allTags }}"  >
       <div class="overlay">
         <a href="{{page.url}}" class="white">
-          <img class="ui image rounded link" src="{{page.images[0] | prepend: "/assets/img/work/460/" | prepend: site.baseurl }}" alt="{{page.title}}">
+          <img class="ui image link" src="{{page.images[0] | prepend: "/assets/img/work/460/" | prepend: site.baseurl }}" alt="{{page.title}}">
           <div class="ui bottom right attached black large label"> {{page.title}}</div>
         </a>
       </div>
@@ -30,17 +28,3 @@
   </div>
   <div class="ui hidden divider"></div>
 </div>
-
-
-<!-- <div class="element-item card {{ page.categories[0] | downcase | replace: " ", "" }}" data-category="{{ page.categories[0] | downcase | replace: " ", "" }}">
-<div class="blurring dimmable image">
-<div class="ui dimmer">
-<div class="content">
-<div class="center">
-<a class="ui button" href="{{page.url}}">{{page.title}}</a>
-</div>
-</div>
-</div>
-<img class="ui image" src="{{page.images[0] | prepend: "/assets/img/work/460/" |  prepend: site.baseurl }}" alt="{{page.title}}">
-</div>
-</div> -->
