@@ -4,7 +4,7 @@ title:  "SCEB Smart Contract Templates for Banking"
 subtitle: "blockchain based smart-contract templates"
 date:   2016-06-13 11:19:48 +0530
 categories: ["Blockchain", "Smart Contract"]
-images: ["sceb-logo.png", "sceb-screen.png"]
+images: ["sceb-screen.png", "sceb-logo.png"]
 permalink: /work/smart-contract-templates-banking-sceb
 work:
   url: https://lightrainstech.github.io/sceb/

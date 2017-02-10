@@ -4,7 +4,7 @@ title:  "Kerala Startup Mission"
 subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
 categories: ["Drupal"]
-images: ["ksum-1024.png", "ksum-front.png"]
+images: ["ksum-front.png"]
 permalink: /work/kerala-startup-mission
 work:
   url: https://startupmission.kerala.gov.in
