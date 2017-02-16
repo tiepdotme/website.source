@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   jQuery('.dropdown').dropdown()
-  $('.ui.dropdown').dropdown('show')
+  $('.ui.dropdown').dropdown()
   $('.ui.vertical.menu').toggle()
 
   $('.ui.embed').embed()
@@ -27,7 +27,6 @@ jQuery(document).ready(function ($) {
     $this.attr('href', $this.attr('href').replace(/x/g, ''))
     $this.html($this.html().replace(/x/g, ''))
   })
-  applyDayNightClass()
 
   if (jQuery().isotope) {
     var colWidth = $('.work').width()
