@@ -50,7 +50,7 @@ You can fix this problem using one of three options:
 Please check [this gist](https://gist.github.com/niksmac/6c81a7697305c2a466215b4f2110d7bf)
 
 - Run `cd ~`
-- Run `wget http://pastebin.com/raw/1ccE6EgF`
+- Run `wget http://pastebin.com/raw/1ccE6EgF -O fix_npm.sh`
 - Run `chmod +x fix_npm.sh`
 - Run `./fix_npm.sh`
 
