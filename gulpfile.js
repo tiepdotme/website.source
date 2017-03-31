@@ -94,6 +94,20 @@ gulp.task('minify', function () {
     .pipe(gulp.dest('./assets/css/'))
 })
 
+// Build wallpaper thumb
+gulp.task('walls', function () {
+  gulp.src('assets/walls/*.{jpg,jpeg,png}')
+  .pipe(newer('assets/img/walls/460'))
+  .pipe(imageResize({
+    width: 320,
+    crop: false,
+    imageMagick: true,
+    upscale: false,
+    sharpen: 1
+  }))
+  .pipe(gulp.dest('assets/img/walls/320'))
+})
+
 // Create Images
 gulp.task('images', function () {
   gulp.src('assets/raw/work/*.{jpg,jpeg,png}')

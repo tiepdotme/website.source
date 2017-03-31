@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<header class="post-header">
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
+
+<div class="ui grid stackable">
+  <div class="ui eleven wide column text page-text">
+    {% if page.subtitle %}
+      <h2 class="post-subtitle" itemprop="name headline">{{ page.subtitle }}</h2>
+    {% endif %}
+    {% if page.meta %}
+      <img class="ui fluid image" src="{{ page.meta | prepend:"/assets/img/blog/" | prepend: site.baseurl }}" alt="{{ page.title }}">
+      <div class="ui hidden divider"></div>
+    {% endif %}
+    {% include author.html %}
+
+    <div class="ui grid stackable">
+      {% for thisimage in page.images %}
+      <div class="ui eight wide column">
+        <a href="{{ thisimage.img | prepend: "/assets/walls/" | prepend: site.baseurl }}" data-lightbox="screns" data-title="{{ page.title }}">
+          <img src="/assets/img/walls/320/{{ thisimage.img }}" class="ui fluid image" alt="{{thisimage.txt}}" />
+        </a>
+        <p>{{thisimage.txt}}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% include comments.html %}
+  </div>
+  <div class="ui five wide column">
+    <div class="ui hidden divider"></div>
+    {% include blog-tags.html %}
+    {% include recentposts.html %}
+    {% include authorbig.html %}
+  </div>
+</div>
