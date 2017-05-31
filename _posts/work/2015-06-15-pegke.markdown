@@ -3,7 +3,7 @@ layout: work
 title:  "Pegke Loyalty"
 subtitle: "Customer Loyalty Reward management Software"
 date:   2015-06-13 11:19:48 +0530
-categories: ["Drupal"]
+categories: ["Blockchain"]
 images: ["pegke-home.png", "pegke-home1.png", "pegke-graph.png"]
 permalink: /work/pegke-loyalty
 work:

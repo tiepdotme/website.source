@@ -3,7 +3,7 @@ layout: work
 title:  "Kerala Startup Mission"
 subtitle: "Drupal customization"
 date:   2016-06-13 11:19:48 +0530
-categories: ["Drupal"]
+categories: ["Consulting"]
 images: ["ksum-front.png"]
 permalink: /work/kerala-startup-mission
 work:
