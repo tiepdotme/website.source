@@ -41,8 +41,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore } from 'redux'
 import { Provider } from 'react-redux'
+```
 Create your store with `reducer`. We can use a simple basic reducer here...
 
+```
 function reducer(state = [], action) {
   switch (action.type) {
     case 'ADD_ACTION':
