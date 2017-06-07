@@ -5,6 +5,7 @@ date: 2017-06-07 10:10:00 +0530
 tag: ["React", "Redux", "State management"]
 permalink: /blogs/state-management-react-with-redux
 author: sibi
+meta: rect-web-app-state-management.png
 subtitle: "Manage your React web apps state using Redux."
 ---
 
