@@ -22,6 +22,6 @@ We are looking for an exceptional engineer to join us on the sprint that takes u
 
  **To Apply:**
 
- Please email a cover letter and resume to {% include email.html param="link" variable-param=page.variable %} with "Software Engineer-Blockchain” in the subject line. No phone calls please.
+ Please email a cover letter and resume to {% include email.html em="careers@lightrains.com" variable-em=page.variable param="link" variable-param=page.variable %} with "Career Enq: SEB062017” in the subject line. No phone calls please.
 
  Only applicants invited to interview will be contacted.
