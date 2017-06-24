@@ -38,4 +38,4 @@ This is an open source project built by [niksmac](https://github.com/niskmac), [
 3. [Wiki](https://github.com/atlaschain/atlas-design/wiki)
 4. [Smart Contracts](https://github.com/atlaschain/contracts) by [kp666](https://github.com/kp666) collaborator
 
-<div class="ui embed" data-source="youtube" data-id="DTowclFE8_4"></div>
+<div class="ui embed" data-source="youtube" data-id="nXcdXQtktug"></div>
