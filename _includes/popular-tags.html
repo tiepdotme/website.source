@@ -1,0 +1,7 @@
+<ul class="ui horizontal list">
+  {% for category in site.tags %}
+    {% if category[1].size > 4 %}
+    <a class="item" href="{{ site.baseurl }}/tag/{{ category[0] | downcase | replace:' ', '-'}}">{{ category[0] | capitalize }} <span> ({{ category[1].size }}) </span></a>
+    {% endif %}
+  {% endfor %}
+</ul>
