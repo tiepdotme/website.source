@@ -4,7 +4,7 @@ layout: compress
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body class="page page-{{page.layout}} path-{{page.class | default: 'inner'}}">
+<body id="page-{{page.layout}}" class="page page-{{page.layout}} path-{{page.class | default: 'inner'}}">
   <div class="ui inverted top sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>
