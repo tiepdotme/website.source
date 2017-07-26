@@ -69,16 +69,6 @@ h2 {
   display: block;
   clear: both; }
 
-.page-text a, .page-text .ui.list .list > .item a.header, .page-text .ui.list > .item a.header {
-  text-decoration: underline; }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  .page-text a {
-    background-image: linear-gradient(to top, transparent, transparent 2px, #333333 2px, #333333 2.5px, transparent 2.5px); } }
-.page-text a:hover, .page-text a:focus {
-  background-image: linear-gradient(to top, transparent, transparent 2px, #2e8b38 2px, #2e8b38 3px, transparent 3px); }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  .page-text a:hover, .page-text a:focus {
-    background-image: linear-gradient(to top, transparent, transparent 2px, #2e8b38 2px, #2e8b38 2.5px, transparent 2.5px); } }
 .page-text .author {
   font-style: italic; }
 .page-text p {
@@ -153,12 +143,29 @@ blockquote {
 .page-post .post-header {
   margin-bottom: 15px; }
 
-.page-blog .page-text a, .page-post .page-text a {
+article a:not(.button) {
+  color: #3958c6 !important;
+  text-shadow: 0 1px 0 white;
   text-decoration: none;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 50%, transparent 50%);
-  background-repeat: repeat-x;
-  background-size: 2px .1em;
-  background-position: 0 1.07em; }
+  border-bottom: 1px dashed #758ad7;
+  position: relative;
+  padding: 0 .2em;
+  transition: all 250ms;
+  z-index: 1000; }
+  article a:not(.button):before {
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+    background: rgba(136, 155, 221, 0.16);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: height 250ms; }
+  article a:not(.button):hover {
+    border-color: transparent; }
+    article a:not(.button):hover:before {
+      height: 100%; }
 
 img:not(.rgb), .ui.image, .image {
   -webkit-filter: grayscale(1);

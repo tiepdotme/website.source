@@ -12,6 +12,7 @@ $green: #2e8b38;
 $offw: $bodyoff;
 $white: #fff;
 $black: #333;
+$a-color: hsl(227, 55%, 50%);
 
 $theFont: "Merriweather Sans", sans-serif;
 
@@ -23,7 +24,7 @@ $theFont: "Merriweather Sans", sans-serif;
   filter: grayscale($pos);
 }
 .ui.button, h1, h2, h3, h4, h5 {
-    font-family: $theFont !important;
+  font-family: $theFont !important;
 }
 
 html {
@@ -120,26 +121,6 @@ h2 {
 }
 
 .page-text {
-
-  a, .ui.list .list > .item a.header, .ui.list > .item a.header {
-    text-decoration: underline;
-  }
-
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    a {
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, #333333 2px, #333333 2.5px, rgba(0, 0, 0, 0) 2.5px);
-    }
-  }
-
-  a:hover, a:focus {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $green 2px, $green 3px, rgba(0, 0, 0, 0) 3px);
-  }
-
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-    a:hover, a:focus {
-      background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 2px, $green 2px, $green 2.5px, rgba(0, 0, 0, 0) 2.5px);
-    }
-  }
 
   .author {
     font-style: italic;
@@ -259,14 +240,32 @@ blockquote {
     margin-bottom: 15px;
   }
 }
-.page-blog, .page-post {
-  .page-text {
-    a {
-      text-decoration: none;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, 0) 50%);
-      background-repeat: repeat-x;
-      background-size: 2px .1em;
-      background-position: 0 1.07em
+article {
+  a:not(.button) {
+    color:$a-color !important;
+    text-shadow:0 1px 0 lighten($a-color,60%);
+    text-decoration:none;
+    border-bottom:1px dashed lighten($a-color, 15%);
+    position:relative;
+    padding:0 .2em;
+    transition:all 250ms;
+    z-index:1000;
+    &:before{
+      content:"";
+      z-index:-1;
+      width:100%;
+      height:0%;
+      background:rgba(lighten($a-color,20%),.16);
+      bottom:0;
+      left:0;
+      position:absolute;
+      transition:height 250ms;
+    }
+    &:hover{
+      border-color:transparent;
+      &:before{
+        height:100%;
+      }
     }
   }
 }
