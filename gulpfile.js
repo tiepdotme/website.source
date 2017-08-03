@@ -56,6 +56,11 @@ var cssFrontArray = [
   './assets/css/semantic.css',
   './assets/css/main.css'
 ]
+var cssSPAArray = [
+  './assets/css/semantic.css',
+  './assets/css/main.css',
+  './assets/css/spa.css'
+]
 var cssPortfolioArray = [
   './assets/css/semantic.css',
   './assets/css/lightbox.min.css',
@@ -91,6 +96,11 @@ gulp.task('minify', function () {
   gulp.src(cssAllArray)
     .pipe(concat('bundle-work-lightbox.min.css'))
     .pipe(cleanCSS({compatibility: 'ie8', keepSpecialComments: 0}))
+    .pipe(gulp.dest('./assets/css/'))
+
+  gulp.src(cssSPAArray)
+    .pipe(concat('bundle-spa.min.css'))
+    .pipe(cleanCSS({keepSpecialComments: 0}))
     .pipe(gulp.dest('./assets/css/'))
 })
 
