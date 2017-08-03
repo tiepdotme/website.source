@@ -83,12 +83,10 @@
   <link href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% elsif page.layout == "imageblog" %}
   <link href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  {% elsif page.layout == "spa" %}
+  <link href="{{ "/assets/css/bundle-spa.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% else %}
   <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  {% endif %}
-
-  {% if page.layout == "spa" %}
-  <link href="{{ "/assets/css/spa.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% endif %}
 
 
