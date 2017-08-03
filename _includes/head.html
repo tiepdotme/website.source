@@ -87,6 +87,10 @@
   <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   {% endif %}
 
+  {% if page.layout == "spa" %}
+  <link href="{{ "/assets/css/spa.css" | prepend: site.baseurl }}" rel="stylesheet">
+  {% endif %}
+
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
