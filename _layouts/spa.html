@@ -1,0 +1,43 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="page-{{page.layout}}" class="page page-{{page.layout}} path-{{page.class | default: 'inner'}}">
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <a class="active item" href="/" title="ICO Consulting">ICO Consulting</a>
+        <a class="item" href="/consulting/blockchain-consulting" title="Blockchain Consulting">Blockchain Consulting</a>
+        <a class="item" href="/consulting/smart-contract-solidity" title="Solidity Smart Contract Development">Smart Contracts</a>
+        <a class="item" href="/about/contact">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="ui text container">
+      <h1 class="ui inverted header">
+        {{page.title}}
+      </h1>
+      <h2>{{page.excerpt}}</h2>
+      <a href="#" class="ui big button primary modalinit">start</a>
+    </div>
+
+  </div>
+    <div class="ui fluid container">
+      {{ content }}
+    </div>
+    {% if page.url == "/" %}
+      {% include technologies.html %}
+      {% include techstack.html %}
+    {% endif %}
+    <div class="ui container footer">
+      {% include footer.html %}
+    </div>
+  {% include analytics.html %}
+  {% include scripts.html %}
+</div>
+</body>
+</html>

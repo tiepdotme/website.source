@@ -1,53 +1,50 @@
-  {% assign title = page.title | defaut: site.title %}
+{% assign title = page.title | defaut: site.title %}
 
 
-  {% if(page.meta) %}
-  {% assign tile = page.meta | prepend:"/assets/img/blog/" | prepend: site.url %}
-  {% endif %}
+{% if(page.meta) %}
+{% assign tile = page.meta | prepend:"/assets/img/blog/" | prepend: site.url %}
+{% endif %}
 
 
-  {% assign description =  page.excerpt | strip_html | strip_newlines | strip | truncate: 160, "" %}
-  {% assign pageurl = page.url | prepend: site.url %}
-  {% assign author = site.data.authors[page.author] %}
-  {% assign individual_account = site.data.authors[page.author].twitter %}
-  {% assign authormeta = author.name | append: ", " | appned: author.email %}
+{% assign description =  page.excerpt | strip_html | strip_newlines | strip | truncate: 160, "" %}
+{% assign pageurl = page.url | prepend: site.url %}
+{% assign author = site.data.authors[page.author] %}
+{% assign individual_account = site.data.authors[page.author].twitter %}
+{% assign authormeta = author.name | append: ", " | appned: author.email %}
 
-  {% if(page.ptype == 'career') %}
-    {% assign tile = page.meta | prepend:"/assets/images/hiring.png" | prepend: site.url %}
-  {% endif %}
+{% if(page.ptype == 'career') %}
+  {% assign tile = page.meta | prepend:"/assets/images/hiring.png" | prepend: site.url %}
+{% endif %}
 
-  {% if(page.layout == 'work') %}
-    {% assign tile = page.images[0] | prepend:"/assets/img/work/960/" | prepend: site.url %}
-  {% endif %}
+{% if(page.layout == 'work') %}
+  {% assign tile = page.images[0] | prepend:"/assets/img/work/960/" | prepend: site.url %}
+{% endif %}
 
-  <!-- Facebook / Open Graph -->
-  <meta property="og:url" content="{{pageurl}}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{title}}">
+<!-- Facebook / Open Graph -->
+<meta property="og:url" content="{{pageurl}}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title}}">
 
-  {% if(tile) %}
-  <meta property="og:image" content="{{tile}}">
-  {% endif %}
+{% if(tile) %}
+<meta property="og:image" content="{{tile}}">
+<meta name="twitter:image" content="{{tile}}">
+{% endif %}
 
-  <meta property="og:description" content="{{description}}">
-  <meta property="og:site_name" content="{{site.title}}">
-  <meta property="og:locale" content="en_US">
-  {% if(author) %}
-  <meta property="article:author" content="{{ authormeta }}">
-  {% endif %}
+<meta property="og:description" content="{{description}}">
+<meta property="og:site_name" content="{{site.title}}">
+<meta property="og:locale" content="en_US">
+{% if(author) %}
+<meta property="article:author" content="{{ authormeta }}">
+{% endif %}
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@{{site.twitter_username}}">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@{{site.twitter_username}}">
 
-  {% if(author) %}
-  <meta name="twitter:creator" content="@{{individual_account}}">
-  {% endif %}
+{% if(author) %}
+<meta name="twitter:creator" content="@{{individual_account}}">
+{% endif %}
 
-  <meta name="twitter:url" content="{{pageurl}}">
-  <meta name="twitter:title" content="{{title}}">
-  <meta name="twitter:description" content="{{description}}">
-
-  {% if(tile) %}
-  <meta name="twitter:image" content="{{tile}}">
-  {% endif %}
+<meta name="twitter:url" content="{{pageurl}}">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{description}}">
