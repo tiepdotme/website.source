@@ -86,13 +86,6 @@ body.page-spa {
 .ui.secondary.inverted.pointing.menu {
   border: 0;
 }
-.page-spa img.image {
-  -webkit-filter: grayscale(0) !important;
-  -moz-filter: grayscale(0) !important;
-  -ms-filter: grayscale(0) !important;
-  -o-filter: grayscale(0) !important;
-  filter: grayscale(0) !important;
-}
 .ui.segment.ctasegment {
   border-radius: 8px !important;
   border: 0 none;
