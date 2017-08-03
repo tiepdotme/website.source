@@ -10,6 +10,10 @@ jQuery(document).ready(function ($) {
     $('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle')
   })
 
+  $('.modalinit').on('click', function (e) {
+    $('.ui.modal').modal('show')
+  })
+
   var pathname = window.location.pathname
   $('#menu > a.item').each(function (index) {
     if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1) {
