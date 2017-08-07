@@ -38,9 +38,9 @@ date:   2016-06-13 11:19:48 +0530
       <p>If you're applying for a developer position, then there is an easy way for you to apply. Check <a href="https://github.com/lightrainstech/join-us.git">this GitHub Repo</a> </p>
       <ul>
        <li>Fork <a href="https://github.com/lightrainstech/join-us.git">this repository.</a></li>
-       <li>Read questions in `questions.md`</li>
-       <li>Create a new file, name it `answers.md`</li>
-       <li>Submit a `Pull Request` once you're finish with all the questions.</li>
+       <li>Read questions in <code>questions.md</code></li>
+       <li>Create a new file, name it <code>answers.md</code></li>
+       <li>Submit a Pull Request once you're finish with all the questions.</li>
       </ul>
 
 
