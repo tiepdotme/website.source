@@ -1,0 +1,11 @@
+<div class="ui vertical stripe segment">
+  <div class="ui text container">
+    {% for post in site.posts %}
+      {% if post.tag contains 'ICO' %}
+        <a class="ui header" href="{{post.url}}" title="{{post.title}}"><h3>{{post.title}}</h3></a>
+        <p>{{post.content | strip_html | strip_newlines | strip | truncate: 160, "" }}</p>
+        <div class="ui hidden divider"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
