@@ -65,7 +65,7 @@ tag_feed_dir: tag
 tag_page_layout: tag_page
 tag_feed_layout: tag_feed
 
-social: [ "https://twitter.com/lightrainstech", "https://medium.com/@lightrains",  "https://www.facebook.com/lightrainstechnolabs",  "https://plus.google.com/108900746872278115127",  "http://www.linkedin.com/company/1322794",
+social: [ "https://twitter.com/lightrainstech", "https://medium.com/lightrains",  "https://www.facebook.com/lightrainstechnolabs",  "https://plus.google.com/108900746872278115127",  "http://www.linkedin.com/company/1322794",
 "https://github.com/lightrainstech"]
 
 compress_html:
