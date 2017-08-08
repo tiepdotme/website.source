@@ -6,10 +6,10 @@ tag: ["Smart Contract", "Solidity", "ICO", "Security", "Handbook"]
 permalink: "/blogs/smart-contract-best-practices-solidity"
 author: niksmac
 meta: smart-contract-best-practices-solidity.png
-subtitle: "Security of a smart contract is mush important than any other software or piece of code just because of the non-editable nature of it in general."
+subtitle: "Security of a smart contract is more important than any other software or piece of code just because of the non-editable nature of it in general."
 ---
 
-Security of a smart contract is mush important than any other software or piece of code just because of the non-editable nature of it in general.
+Security of a smart contract is more important than any other software or piece of code just because of the non-editable nature of it in general.
 
 Still, there are no widely adopted security standards or best practices for projects to follow. There are no tools for developers to easily create, test, verify and audit smart contracts, and do so collaboratively. Entire Ethereum community is grateful for researchers and developers of [OpenZeppelin/zeppelin-solidity](https://github.com/OpenZeppelin/zeppelin-solidity) for the standard and well tested contract sources to relay on.
 
