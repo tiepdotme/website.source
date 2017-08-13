@@ -208,4 +208,4 @@ gulp.task('watch', function () {
   gulp.watch('./assets/css/*.scss', runSequence('sass', 'minify'))
 })
 
-gulp.task('default', runSequence('sass', 'minify', 'images', 'compressimages'))
+gulp.task('default', ['sass'])
