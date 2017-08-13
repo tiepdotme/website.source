@@ -78,15 +78,30 @@
   })(); </script>
 
   {% if page.url == "/about/portfolio" %}
-  <link href="{{ "/assets/css/bundle-work.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="preload" href="{{ "/assets/css/bundle-work.min.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/assets/css/bundle-work.min.css" | prepend: site.baseurl }}">
+  <link href="/assets/js/bundle-work.min.js" rel="preload" as="script">
+
   {% elsif page.layout == "work" %}
-  <link href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="preload" href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}">
+  <link href="/assets/js/bundle-work-lightbox.min.js" rel="preload" as="script">
+
   {% elsif page.layout == "imageblog" %}
-  <link href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="preload" href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/assets/css/bundle-work-lightbox.min.css" | prepend: site.baseurl }}">
+  <link href="/assets/js/bundle-work-lightbox.min.js" rel="preload" as="script">
+
   {% elsif page.layout == "spa" %}
-  <link href="{{ "/assets/css/bundle-spa.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="preload" href="{{ "/assets/css/bundle-spa.min.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/assets/css/bundle-spa.min.css" | prepend: site.baseurl }}">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
+
   {% else %}
-  <link href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="preload" href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}" as="style">
+  <link rel="stylesheet" href="{{ "/assets/css/bundle-front.min.css" | prepend: site.baseurl }}">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
+
   {% endif %}
 
 
