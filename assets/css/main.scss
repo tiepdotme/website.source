@@ -226,6 +226,12 @@ blockquote {
     font-weight: 300 !important;
     line-height: 1.4em !important;
   }
+  .footer {
+    .ui.header {
+      border-bottom: 2px solid #FFF;
+      display: inline-block;
+    }
+  }
   .sub.header {
     font-weight: 300 !important;
     line-height: 1.5em !important
