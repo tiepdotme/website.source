@@ -4,6 +4,13 @@
       {% if post.tag contains 'ICO' %}
         <a class="ui header" href="{{post.url}}" title="{{post.title}}"><h3>{{post.title}}</h3></a>
         <p>{{post.content | strip_html | strip_newlines | strip | truncate: 160, "" }}</p>
+
+        <div class="ui black labels">
+          {% assign sorted_tags = post.tag | sort %}
+          {% for category in sorted_tags %}
+            <a href="/tag/{{category | downcase | replace:' ', '-' }}/" class="ui label" title="Blogs Tagged {{category}}" >{{category | camelcase }}</a>
+          {% endfor %}
+        </div>
         <div class="ui hidden divider"></div>
       {% endif %}
     {% endfor %}
