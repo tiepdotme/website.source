@@ -367,3 +367,6 @@ code {
   margin-top: 7vh; }
 .page-blog article h3 {
   margin-top: 5vh; }
+
+abbr[title] {
+  border: 0 none; }
