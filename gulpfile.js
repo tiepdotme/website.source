@@ -13,7 +13,7 @@ var watch = require('gulp-watch')
 var purify = require('gulp-purifycss')
 const imagemin = require('gulp-imagemin')
 
-gulp.task('default', function () {
+gulp.task('buildsemantic', function () {
   return gulp.src('assets/semantic/dist/*.css')
   .pipe(gulp.dest('assets/css')),
 
@@ -190,7 +190,7 @@ gulp.task('favicon', function () {
       favicons: true,
       firefox: true,
       opengraph: false,
-      twitter: true,
+      twitter: false,
       windows: false,
       yandex: false
     }
@@ -207,3 +207,5 @@ gulp.task('purify', function () {
 gulp.task('watch', function () {
   gulp.watch('./assets/css/*.scss', runSequence('sass', 'minify'))
 })
+
+gulp.task('default', runSequence('sass', 'minify', 'images', 'compressimages'))
