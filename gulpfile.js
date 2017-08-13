@@ -11,6 +11,7 @@ var newer = require('gulp-newer')
 var runSequence = require('run-sequence')
 var watch = require('gulp-watch')
 var purify = require('gulp-purifycss')
+const imagemin = require('gulp-imagemin')
 
 gulp.task('default', function () {
   return gulp.src('assets/semantic/dist/*.css')
@@ -116,6 +117,17 @@ gulp.task('walls', function () {
     sharpen: 1
   }))
   .pipe(gulp.dest('assets/img/walls/320'))
+})
+
+// Compress images
+gulp.task('compressimages', function () {
+  gulp.src('assets/img/**/*.{jpg,jpeg,png}')
+  .pipe(imagemin({
+    interlaced: true,
+    progressive: true,
+    optimizationLevel: 4
+  }))
+  .pipe(gulp.dest('assets/img/'))
 })
 
 // Create Images
