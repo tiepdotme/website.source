@@ -57,6 +57,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-offline
 
 paginate: 8
 paginate_path: "/blogs/page:num/"
@@ -83,3 +84,7 @@ ampdir: amp
 whitelist:
   - jekyll-gist
   - jekyll-paginate
+  - jekyll-offline
+
+offline:
+  strategy: cache-first-network-fallback
