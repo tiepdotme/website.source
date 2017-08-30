@@ -25,7 +25,7 @@ gulp.task('buildsemantic', function () {
 })
 
 gulp.task('sass', () =>
-  sass('./assets/css/main.scss')
+  sass(['./assets/css/main.scss', './assets/css/spa.scss'])
     .on('error', sass.logError)
     .pipe(gulp.dest('./assets/css/'))
 )
