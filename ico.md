@@ -20,28 +20,12 @@ excerpt: "ICO Consulting and Development Services, Initial Coin Offering Consult
         <img src="/assets/img/rocket-ship.png" alt="ICO Rocketship" class="ui large image">
       </div>
     </div>
-    <div class="row centered">
-      <div class="center aligned ten wide column">
-        {% include email.html param="button" variable-param=page.variable %}
-      </div>
-    </div>
-    <!-- <div class="row centered">
-      <div class="center aligned ten wide column">
-        <a class="ui huge button">Check Them Out</a>
-        <div class="ui segment ctasegment">
-          <div class="ui grid">
-            <div class="six wide column">...</div>
-            <div class="six wide column">...</div>
-            <div class="four wide column">...</div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
-
-
-
 </div>
+
+{% include ico-pricing.html %}
+
+<!-- {% include ico-team.html %} -->
 
 <!-- <div class="ui vertical stripe quote segment">
   <div class="ui container">
