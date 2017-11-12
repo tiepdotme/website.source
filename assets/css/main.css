@@ -237,7 +237,8 @@ pre.highlight, pre {
   background: #323232;
   padding: 1rem;
   color: #FFF;
-  border-radius: 4px; }
+  border-radius: 4px;
+  overflow-x: scroll; }
 
 #menu.right.menu {
   height: 50px; }
