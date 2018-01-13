@@ -23,26 +23,10 @@ excerpt: "ICO Consulting and Development Services, Initial Coin Offering Consult
   </div>
 </div>
 
-{% include ico-pricing.html %}
+<!-- {% include ico-pricing.html %}
+{% include ico-team.html %}
+{% include ico-services.html %} -->
 
-<!-- {% include ico-team.html %} -->
-
-<!-- <div class="ui vertical stripe quote segment">
-  <div class="ui container">
-    <div class="ui equal width stackable internally celled grid">
-      <div class="center aligned row">
-        <div class="column">
-          <h3>Manage your investment</h3>
-          <p>The Initial Coin Offering (ICO) is just the beginning. We are developing a Coin Governance System (CGS) to allow investor participation in ICO funds management.</p>
-        </div>
-        <div class="column">
-          <h3>Fund your project</h3>
-          <p>Deploy your ICO on the Ethereum blockchain and be part of the next generation ICO marketplace. Raise capital for your project in a fast, easy and secure way.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 {% include icoblogs.html %}
 
