@@ -87,4 +87,4 @@ whitelist:
   - jekyll-offline
 
 offline:
-  strategy: cache-first-network-fallback
+  strategy: network-first-cache-fallback
