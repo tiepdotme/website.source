@@ -3,7 +3,6 @@ layout: post
 title: Careers
 permalink: /about/careers
 date:   2016-06-13 11:19:48 +0530
-
 ---
 
 <div class="ui grid stackable">
@@ -21,7 +20,6 @@ date:   2016-06-13 11:19:48 +0530
         <li class="item">Solve Meaningful Problems</li>
         <li class="item">Build and Promote Great Technology</li>
         <li class="item">Work with Brilliant People</li>
-        <li class="item">Work in the interesting new technologies</li>
       </ul>
       <div class="ui hidden big divider"></div>
 
