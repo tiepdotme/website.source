@@ -5,7 +5,7 @@
     <div class="content">
       <a class="header" href="{{ author.web }}" rel="author">{{ author.name }}</a>
       <div class="description">
-        {{ author.bio | truncatewords: 10}}
+        {{ author.bio | truncatewords: 40}}
       </div>
       <div class="social">
         {% if author.linkedin %}

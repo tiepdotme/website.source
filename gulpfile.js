@@ -153,7 +153,6 @@ gulp.task('images', function () {
     sharpen: 1
   }))
   .pipe(gulp.dest('assets/img/work/960')),
-
   gulp.src('assets/raw/blog/*.{jpg,jpeg,png}')
   .pipe(newer('assets/img/blog'))
   .pipe(imageResize({
