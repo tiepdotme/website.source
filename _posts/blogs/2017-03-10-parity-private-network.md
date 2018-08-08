@@ -9,7 +9,7 @@ author: niksmac
 subtitle: "an Ethereum client, written for correctness-verifiability, modularisation, low-footprint and high-performance."
 ---
 
-Hope you know what a private blockchain and why do we need one, if not; please take a look at [Private Permissioned Blockchain](https://lightrains.com/blogs/what-private-permissioned-blockchain). After youre done with the reading, lets proceed with setting up Parity.
+Hope you know what a private blockchain and why do we need one, if not; please take a look at [Private Permissioned Blockchain](https://lightrains.com/blogs/what-private-permissioned-blockchain). After you're done with the reading, lets proceed with setting up Parity.
 
 **Parity:** is an Ethereum client, written from the ground-up for correctness-verifiability, modularisation, low-footprint and high-performance.
 
