@@ -1,5 +1,5 @@
  /*
- * # Semantic UI - 2.2.13
+ * # Semantic UI - 2.3.3
  * https://github.com/Semantic-Org/Semantic-UI
  * http://www.semantic-ui.com/
  *
@@ -9,7 +9,7 @@
  *
  */
 /*!
- * # Semantic UI 2.2.13 - Site
+ * # Semantic UI 2.3.3 - Site
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -497,7 +497,7 @@ $.extend($.expr[ ":" ], {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Form Validation
+ * # Semantic UI 2.3.3 - Form Validation
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -508,7 +508,7 @@ $.extend($.expr[ ":" ], {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -856,7 +856,7 @@ $.fn.form = function(parameters) {
                   module.validate.field( validationRules );
                 }
               }
-              else if(settings.on == 'blur' || settings.on == 'change') {
+              else if(settings.on == 'blur') {
                 if(validationRules) {
                   module.validate.field( validationRules );
                 }
@@ -933,16 +933,16 @@ $.fn.form = function(parameters) {
             var
               ruleName      = module.get.ruleName(rule),
               ancillary     = module.get.ancillaryValue(rule),
-              prompt        = rule.prompt || settings.prompt[ruleName] || settings.text.unspecifiedRule,
+              $field        = module.get.field(field.identifier),
+              value         = $field.val(),
+              prompt        = $.isFunction(rule.prompt)
+                ? rule.prompt(value)
+                : rule.prompt || settings.prompt[ruleName] || settings.text.unspecifiedRule,
               requiresValue = (prompt.search('{value}') !== -1),
               requiresName  = (prompt.search('{name}') !== -1),
               $label,
-              $field,
               name
             ;
-            if(requiresName || requiresValue) {
-              $field = module.get.field(field.identifier);
-            }
             if(requiresValue) {
               prompt = prompt.replace('{value}', $field.val());
             }
@@ -1101,9 +1101,9 @@ $.fn.form = function(parameters) {
                 }
                 else {
                   if(isRadio) {
-                    if(values[name] === undefined) {
+                    if(values[name] === undefined || values[name] == false) {
                       values[name] = (isChecked)
-                        ? true
+                        ? value || true
                         : false
                       ;
                     }
@@ -1761,10 +1761,10 @@ $.fn.form.settings = {
     isExactly            : '{name} must be exactly "{ruleValue}"',
     not                  : '{name} cannot be set to "{ruleValue}"',
     notExactly           : '{name} cannot be set to exactly "{ruleValue}"',
-    contain              : '{name} cannot contain "{ruleValue}"',
-    containExactly       : '{name} cannot contain exactly "{ruleValue}"',
-    doesntContain        : '{name} must contain  "{ruleValue}"',
-    doesntContainExactly : '{name} must contain exactly "{ruleValue}"',
+    contain              : '{name} must contain "{ruleValue}"',
+    containExactly       : '{name} must contain exactly "{ruleValue}"',
+    doesntContain        : '{name} cannot contain  "{ruleValue}"',
+    doesntContainExactly : '{name} cannot contain exactly "{ruleValue}"',
     minLength            : '{name} must be at least {ruleValue} characters',
     length               : '{name} must be at least {ruleValue} characters',
     exactLength          : '{name} must be exactly {ruleValue} characters',
@@ -2204,7 +2204,7 @@ $.fn.form.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Modal
+ * # Semantic UI 2.3.3 - Modal
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -2215,7 +2215,7 @@ $.fn.form.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -2313,6 +2313,10 @@ $.fn.modal = function(parameters) {
             var
               defaultSettings = {
                 debug      : settings.debug,
+                variation  : settings.centered
+                  ? false
+                  : 'top aligned'
+                ,
                 dimmerName : 'modals'
               },
               dimmerSettings = $.extend(true, defaultSettings, settings.dimmerSettings)
@@ -2370,7 +2374,6 @@ $.fn.modal = function(parameters) {
           module.cacheSizes();
           module.set.screenHeight();
           module.set.type();
-          module.set.position();
         },
 
         refreshModals: function() {
@@ -2443,21 +2446,23 @@ $.fn.modal = function(parameters) {
             module.hide();
           },
           click: function(event) {
+            if(!settings.closable) {
+              module.verbose('Dimmer clicked but closable setting is disabled');
+              return;
+            }
             var
               $target   = $(event.target),
               isInModal = ($target.closest(selector.modal).length > 0),
               isInDOM   = $.contains(document.documentElement, event.target)
             ;
-            if(!isInModal && isInDOM) {
+            if(!isInModal && isInDOM && module.is.active()) {
               module.debug('Dimmer clicked, hiding all modals');
-              if( module.is.active() ) {
-                module.remove.clickaway();
-                if(settings.allowMultiple) {
-                  module.hide();
-                }
-                else {
-                  module.hideAll();
-                }
+              module.remove.clickaway();
+              if(settings.allowMultiple) {
+                module.hide();
+              }
+              else {
+                module.hideAll();
               }
             }
           },
@@ -2525,7 +2530,6 @@ $.fn.modal = function(parameters) {
 
             module.showDimmer();
             module.cacheSizes();
-            module.set.position();
             module.set.screenHeight();
             module.set.type();
             module.set.clickaway();
@@ -2692,7 +2696,13 @@ $.fn.modal = function(parameters) {
 
         save: {
           focus: function() {
-            $focusedElement = $(document.activeElement).blur();
+            var
+              $activeElement = $(document.activeElement),
+              inCurrentModal = $activeElement.closest($module).length > 0
+            ;
+            if(!inCurrentModal) {
+              $focusedElement = $(document.activeElement).blur();
+            }
           }
         },
 
@@ -2709,11 +2719,9 @@ $.fn.modal = function(parameters) {
             $module.removeClass(className.active);
           },
           clickaway: function() {
-            if(settings.closable) {
-              $dimmer
-                .off('click' + elementEventNamespace)
-              ;
-            }
+            $dimmer
+              .off('click' + elementEventNamespace)
+            ;
           },
           bodyStyle: function() {
             if($body.attr('style') === '') {
@@ -2811,11 +2819,9 @@ $.fn.modal = function(parameters) {
             }
           },
           clickaway: function() {
-            if(settings.closable) {
-              $dimmer
-                .on('click' + elementEventNamespace, module.event.click)
-              ;
-            }
+            $dimmer
+              .on('click' + elementEventNamespace, module.event.click)
+            ;
           },
           dimmerSettings: function() {
             if($.fn.dimmer === undefined) {
@@ -2826,8 +2832,11 @@ $.fn.modal = function(parameters) {
               defaultSettings = {
                 debug      : settings.debug,
                 dimmerName : 'modals',
-                variation  : false,
                 closable   : 'auto',
+                variation  : settings.centered
+                  ? false
+                  : 'top aligned'
+                ,
                 duration   : {
                   show     : settings.duration,
                   hide     : settings.duration
@@ -2881,25 +2890,6 @@ $.fn.modal = function(parameters) {
             else {
               module.verbose('Modal cannot fit on screen setting to scrolling');
               module.set.scrolling();
-            }
-          },
-          position: function() {
-            module.verbose('Centering modal on page', module.cache);
-            if(module.can.fit()) {
-              $module
-                .css({
-                  top: '',
-                  marginTop: module.cache.topOffset
-                })
-              ;
-            }
-            else {
-              $module
-                .css({
-                  marginTop : '',
-                  top       : $document.scrollTop()
-                })
-              ;
             }
           },
           undetached: function() {
@@ -3110,6 +3100,8 @@ $.fn.modal.settings = {
   inverted       : false,
   blurring       : false,
 
+  centered       : true,
+
   dimmerSettings : {
     closable : false,
     useCSS   : true
@@ -3172,7 +3164,7 @@ $.fn.modal.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Dimmer
+ * # Semantic UI 2.3.3 - Dimmer
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3183,7 +3175,7 @@ $.fn.modal.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -3287,6 +3279,10 @@ $.fn.dimmer = function(parameters) {
 
         bind: {
           events: function() {
+            if(module.is.page()) {
+              // touch events default to passive, due to changes in chrome to optimize mobile perf
+              $dimmable.get(0).addEventListener('touchmove', module.event.preventScroll, { passive: false });
+            }
             if(settings.on == 'hover') {
               $dimmable
                 .on('mouseenter' + eventNamespace, module.show)
@@ -3314,6 +3310,9 @@ $.fn.dimmer = function(parameters) {
 
         unbind: {
           events: function() {
+            if(module.is.page()) {
+              $dimmable.get(0).removeEventListener('touchmove', module.event.preventScroll, { passive: false });
+            }
             $module
               .removeData(moduleNamespace)
             ;
@@ -3330,6 +3329,9 @@ $.fn.dimmer = function(parameters) {
               module.hide();
               event.stopImmediatePropagation();
             }
+          },
+          preventScroll: function(event) {
+            event.preventDefault();
           }
         },
 
@@ -3411,6 +3413,7 @@ $.fn.dimmer = function(parameters) {
               }
               $dimmer
                 .transition({
+                  displayType : 'flex',
                   animation   : settings.transition + ' in',
                   queue       : false,
                   duration    : module.get.duration(),
@@ -3455,6 +3458,7 @@ $.fn.dimmer = function(parameters) {
               module.verbose('Hiding dimmer with css');
               $dimmer
                 .transition({
+                  displayType : 'flex',
                   animation   : settings.transition + ' out',
                   queue       : false,
                   duration    : module.get.duration(),
@@ -3881,7 +3885,7 @@ $.fn.dimmer.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Checkbox
+ * # Semantic UI 2.3.3 - Checkbox
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -3892,7 +3896,7 @@ $.fn.dimmer.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -4713,7 +4717,7 @@ $.fn.checkbox.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Dropdown
+ * # Semantic UI 2.3.3 - Dropdown
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -4724,7 +4728,7 @@ $.fn.checkbox.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -5210,7 +5214,7 @@ $.fn.dropdown = function(parameters) {
             ? callback
             : function(){}
           ;
-          if( module.is.active() ) {
+          if( module.is.active() && !module.is.animatingOutward() ) {
             module.debug('Hiding dropdown');
             if(settings.onHide.call(element) !== false) {
               module.animate.hide(function() {
@@ -5468,10 +5472,19 @@ $.fn.dropdown = function(parameters) {
                 callback();
               },
               onSuccess : function(response) {
-                module.remove.message();
-                module.setup.menu({
-                  values: response[fields.remoteValues]
-                });
+                var
+                  values          = response[fields.remoteValues],
+                  hasRemoteValues = ($.isArray(values) && values.length > 0)
+                ;
+                if(hasRemoteValues) {
+                  module.remove.message();
+                  module.setup.menu({
+                    values: response[fields.remoteValues]
+                  });
+                }
+                else {
+                  module.add.message(message.noResults);
+                }
                 callback();
               }
             }
@@ -6331,7 +6344,7 @@ $.fn.dropdown = function(parameters) {
               : text
             ;
             if( module.can.activate( $(element) ) ) {
-              module.set.value(value, $(element));
+              module.set.value(value, text, $(element));
               if(module.is.multiple() && !module.is.allFiltered()) {
                 return;
               }
@@ -6997,7 +7010,7 @@ $.fn.dropdown = function(parameters) {
             var
               length = module.get.query().length
             ;
-            $search.val( text.substr(0 , length));
+            $search.val( text.substr(0, length));
           },
           scrollPosition: function($item, forceScroll) {
             var
@@ -7149,7 +7162,6 @@ $.fn.dropdown = function(parameters) {
             var
               escapedValue = module.escape.value(value),
               hasInput     = ($input.length > 0),
-              isAddition   = !module.has.value(value),
               currentValue = module.get.values(),
               stringValue  = (value !== undefined)
                 ? String(value)
@@ -7252,8 +7264,8 @@ $.fn.dropdown = function(parameters) {
                       module.save.remoteData(selectedText, selectedValue);
                     }
                     if(settings.useLabels) {
-                      module.add.value(selectedValue, selectedText, $selected);
                       module.add.label(selectedValue, selectedText, shouldAnimate);
+                      module.add.value(selectedValue, selectedText, $selected);
                       module.set.activeItem($selected);
                       module.filterActive();
                       module.select.nextAvailable($selectedItem);
@@ -7294,6 +7306,9 @@ $.fn.dropdown = function(parameters) {
               escapedValue = module.escape.value(value),
               $label
             ;
+            if(settings.ignoreCase) {
+              escapedValue = escapedValue.toLowerCase();
+            }
             $label =  $('<a />')
               .addClass(className.label)
               .attr('data-' + metadata.value, escapedValue)
@@ -7302,7 +7317,7 @@ $.fn.dropdown = function(parameters) {
             $label = settings.onLabelCreate.call($label, escapedValue, text);
 
             if(module.has.label(value)) {
-              module.debug('Label already exists, skipping', escapedValue);
+              module.debug('User selection already exists, skipping', escapedValue);
               return;
             }
             if(settings.label.variation) {
@@ -7441,6 +7456,10 @@ $.fn.dropdown = function(parameters) {
               currentValue = module.get.values(),
               newValue
             ;
+            if(module.has.value(addedValue)) {
+              module.debug('Value already selected');
+              return;
+            }
             if(addedValue === '') {
               module.debug('Cannot select blank values from multiselect');
               return;
@@ -7754,6 +7773,9 @@ $.fn.dropdown = function(parameters) {
               escapedValue = module.escape.value(value),
               $labels      = $module.find(selector.label)
             ;
+            if(settings.ignoreCase) {
+              escapedValue = escapedValue.toLowerCase();
+            }
             return ($labels.filter('[data-' + metadata.value + '="' + module.escape.string(escapedValue) +'"]').length > 0);
           },
           maxSelections: function() {
@@ -7772,6 +7794,12 @@ $.fn.dropdown = function(parameters) {
             return (module.get.query() !== '');
           },
           value: function(value) {
+            return (settings.ignoreCase)
+              ? module.has.valueIgnoringCase(value)
+              : module.has.valueMatchingCase(value)
+            ;
+          },
+          valueMatchingCase: function(value) {
             var
               values   = module.get.values(),
               hasValue = $.isArray(values)
@@ -7782,12 +7810,34 @@ $.fn.dropdown = function(parameters) {
               ? true
               : false
             ;
+          },
+          valueIgnoringCase: function(value) {
+            var
+              values   = module.get.values(),
+              hasValue = false
+            ;
+            if(!$.isArray(values)) {
+              values = [values];
+            }
+            $.each(values, function(index, existingValue) {
+              if(String(value).toLowerCase() == String(existingValue).toLowerCase()) {
+                hasValue = true;
+                return false;
+              }
+            });
+            return hasValue;
           }
         },
 
         is: {
           active: function() {
             return $module.hasClass(className.active);
+          },
+          animatingInward: function() {
+            return $menu.transition('is inward');
+          },
+          animatingOutward: function() {
+            return $menu.transition('is outward');
           },
           bubbledLabelClick: function(event) {
             return $(event.target).is('select, input') && $module.closest('label').length > 0;
@@ -7924,6 +7974,9 @@ $.fn.dropdown = function(parameters) {
             ;
             calculations = {
               context: {
+                offset    : ($context.get(0) === window)
+                  ? { top: 0, left: 0}
+                  : $context.offset(),
                 scrollTop : $context.scrollTop(),
                 height    : $context.outerHeight()
               },
@@ -7936,8 +7989,8 @@ $.fn.dropdown = function(parameters) {
               calculations.menu.offset.top += calculations.context.scrollTop;
             }
             onScreen = {
-              above : (calculations.context.scrollTop) <= calculations.menu.offset.top - calculations.menu.height,
-              below : (calculations.context.scrollTop + calculations.context.height) >= calculations.menu.offset.top + calculations.menu.height
+              above : (calculations.context.scrollTop) <= calculations.menu.offset.top - calculations.context.offset.top - calculations.menu.height,
+              below : (calculations.context.scrollTop + calculations.context.height) >= calculations.menu.offset.top - calculations.context.offset.top + calculations.menu.height
             };
             if(onScreen.below) {
               module.verbose('Dropdown can fit in context downward', onScreen);
@@ -7966,6 +8019,9 @@ $.fn.dropdown = function(parameters) {
             ;
             calculations = {
               context: {
+                offset     : ($context.get(0) === window)
+                  ? { top: 0, left: 0}
+                  : $context.offset(),
                 scrollLeft : $context.scrollLeft(),
                 width      : $context.outerWidth()
               },
@@ -7977,7 +8033,7 @@ $.fn.dropdown = function(parameters) {
             if(module.is.horizontallyScrollableContext()) {
               calculations.menu.offset.left += calculations.context.scrollLeft;
             }
-            isOffscreenRight = (calculations.menu.offset.left + calculations.menu.width >= calculations.context.scrollLeft + calculations.context.width);
+            isOffscreenRight = (calculations.menu.offset.left - calculations.context.offset.left + calculations.menu.width >= calculations.context.scrollLeft + calculations.context.width);
             if(isOffscreenRight) {
               module.verbose('Dropdown cannot fit in context rightward', isOffscreenRight);
               canOpenRightward = false;
@@ -8083,7 +8139,7 @@ $.fn.dropdown = function(parameters) {
                     duration   : settings.duration,
                     debug      : settings.debug,
                     verbose    : settings.verbose,
-                    queue      : true,
+                    queue      : false,
                     onStart    : start,
                     onComplete : function() {
                       callback.call(element);
@@ -8371,7 +8427,8 @@ $.fn.dropdown.settings = {
   forceSelection         : true,       // force a choice on blur with search selection
 
   allowAdditions         : false,      // whether multiple select should allow user added values
-  hideAdditions          : true,      // whether or not to hide special message prompting a user they can enter a value
+  ignoreCase             : false,       // whether to consider values not matching in case to be the same
+  hideAdditions          : true,       // whether or not to hide special message prompting a user they can enter a value
 
   maxSelections          : false,      // When set to a number limits the number of selections to this count
   useLabels              : true,       // whether multiple select should filter currently active selections from choices
@@ -8565,7 +8622,7 @@ $.fn.dropdown.settings.templates = {
           ? 'disabled '
           : ''
       ;
-      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>'
+      html += '<div class="'+ maybeDisabled +'item" data-value="' + option[fields.value] + '"' + maybeText + '>';
       html +=   option[fields.name];
       html += '</div>';
     });
@@ -8593,7 +8650,7 @@ $.fn.dropdown.settings.templates = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Embed
+ * # Semantic UI 2.3.3 - Embed
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -8604,7 +8661,7 @@ $.fn.dropdown.settings.templates = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -9290,7 +9347,7 @@ $.fn.embed.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Sidebar
+ * # Semantic UI 2.3.3 - Sidebar
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -9301,7 +9358,7 @@ $.fn.embed.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -10324,7 +10381,7 @@ $.fn.sidebar.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Sticky
+ * # Semantic UI 2.3.3 - Sticky
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -10335,7 +10392,7 @@ $.fn.sidebar.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -11284,7 +11341,7 @@ $.fn.sticky.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Transition
+ * # Semantic UI 2.3.3 - Transition
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -11295,7 +11352,7 @@ $.fn.sticky.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -13089,7 +13146,7 @@ $.fn.state.settings = {
 })( jQuery, window, document );
 
 /*!
- * # Semantic UI 2.2.13 - Visibility
+ * # Semantic UI 2.3.3 - Visibility
  * http://github.com/semantic-org/semantic-ui/
  *
  *
@@ -13100,7 +13157,7 @@ $.fn.state.settings = {
 
 ;(function ($, window, document, undefined) {
 
-"use strict";
+'use strict';
 
 window = (typeof window != 'undefined' && window.Math == Math)
   ? window
@@ -14017,13 +14074,13 @@ $.fn.visibility = function(parameters) {
             // visibility
             element.topPassed        = (screen.top >= element.top);
             element.bottomPassed     = (screen.top >= element.bottom);
-            element.topVisible       = (screen.bottom >= element.top) && !element.bottomPassed;
-            element.bottomVisible    = (screen.bottom >= element.bottom) && !element.topPassed;
+            element.topVisible       = (screen.bottom >= element.top) && !element.topPassed;
+            element.bottomVisible    = (screen.bottom >= element.bottom) && !element.bottomPassed;
             element.pixelsPassed     = 0;
             element.percentagePassed = 0;
 
             // meta calculations
-            element.onScreen  = (element.topVisible && !element.bottomPassed);
+            element.onScreen  = ((element.topVisible || element.passing) && !element.bottomPassed);
             element.passing   = (element.topPassed && !element.bottomPassed);
             element.offScreen = (!element.onScreen);
 
