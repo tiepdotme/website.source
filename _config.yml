@@ -27,9 +27,11 @@ permalink: :title
 
 # Handling Reading
 safe:         false
-exclude:      [
+exclude: [
   ".git",
   ".svn",
+  ".bundle",
+  "vendor",
   "assets/semantic",
   "node_modules",
   "gulpfile.js",
