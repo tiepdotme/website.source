@@ -18,5 +18,5 @@
   "permission": false,
   "rtl": "No",
   "components": ["reset", "site", "button", "container", "divider", "header", "icon", "card", "image", "label", "list", "segment", "grid", "menu", "item", "form", "modal", "dimmer", "checkbox", "dropdown", "embed", "sidebar", "sticky", "transition", "state", "visibility"],
-  "version": "2.3.3"
+  "version": "2.4.2"
 }
