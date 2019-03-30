@@ -2,7 +2,7 @@
 layout: post
 title: Careers
 permalink: /about/careers
-date:   2016-06-13 11:19:48 +0530
+date: 2016-06-13 11:19:48 +0530
 ---
 
 <div class="ui grid stackable">
@@ -12,7 +12,7 @@ date:   2016-06-13 11:19:48 +0530
         A lot of companies talk about culture, their awesome office, fun events and great perks. But we view culture differently. We believe it's about rallying people who enjoy each other's company and respect each other's skill. It's about working alongside people you rely on to spar with you intellectually one moment, then grab tacos with you the next.
       </p>
       <p>
-        We've created a culture that rewards bright, driven, and fun-loving people. We take our work seriously.
+        We've created a culture that rewards bright, driven, and fun-loving people. We take our work seriously. Feel free to checkout our <a href='/about/code-of-conduct'>code of conduct</a>
       </p>
       <strong>At {{ site.title }} you can...</strong>
       <ul>
