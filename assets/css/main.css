@@ -398,3 +398,7 @@ code {
 
 abbr[title] {
   border: 0 none; }
+
+@media only screen and (max-width: 767px) {
+  .ui.stackable.grid.w > .column:not(.row) {
+    margin: -1rem !important; } }

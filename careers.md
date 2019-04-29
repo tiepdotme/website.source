@@ -5,7 +5,7 @@ permalink: /about/careers
 date: 2016-06-13 11:19:48 +0530
 ---
 
-<div class="ui grid stackable">
+<div class="ui grid stackable w">
 
     <div class="column ten wide">
       <p>

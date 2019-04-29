@@ -31,7 +31,8 @@ published: false
 <div class="ui divider"></div>
 <div class="ui four column stackable grid">
 
-  {% for thisAuthor in site.data.team offset:2 %}
+{% for thisAuthor in site.data.team offset:2 %}
+
   <div class="column">
     <div class="ui fluid card">
       <div class="image">
@@ -49,6 +50,5 @@ published: false
     </div>
   </div>
   {% endfor %}
-
 
 </div>

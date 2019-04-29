@@ -6,7 +6,6 @@ title: Technologies
 
 # Technologies
 
-
 <div class="ui internally celled equal width grid">
   <div class="row">
     <div class="column">
@@ -24,6 +23,7 @@ title: Technologies
     <div class="column">
       ...
     </div>
+
   </div>
 
   <div class="row">

@@ -5,7 +5,7 @@ permalink: /about/code-of-conduct
 date: 2019-03-20 11:19:48 +0530
 ---
 
-<div class="ui grid stackable">
+<div class="ui grid stackable w">
 
     <div class="column ten wide">
       <p>
