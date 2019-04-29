@@ -53,7 +53,7 @@ i.e. 2400 BNB are required for the issuing/listing.
 -   Register in Binance (Live exchange) [Register](https://www.binance.com/register.html)
 -   Get BNB from test [faucet](https://www.binance.com/en/dex/testnet/address)
 
-> Each address can only get 200 BNB from the faucet. To get the necessary test BNB, you might get more from your friends or register more addresses, and transfer all BNB into one wallet.
+> Each address can only get 200 BNB from the faucet. To get the required test BNB, you may ask for more from your friends or register more addresses in the account, and transfer all test BNB into one wallet.
 
 ## 3. Create/Issue token
 
@@ -123,7 +123,7 @@ Here we issued a token called LIGHT, the total amount is 1 billion. To avoid abu
 
 ## 4. Proposal to list token
 
-You need to create a proposal to let validators vote. You can use the following command to create a listing proposal.
+You will have to create a listing proposal to let validators to vote. You can use the following command to create a listing proposal.
 
 ```
 $ ./bnbcli gov submit-list-proposal \
@@ -143,7 +143,7 @@ $ ./bnbcli gov submit-list-proposal \
 
 It will prompt you to enter password, enter it.
 
-In this example, we deposited 2000 BNB for the listing proposal and the initial price is 1 BNB. Please pay attention that according to the official document, the initial price must be 1 BNB or the proposal will be rejected.
+In this example, we deposited 2000 BNB for the token listing proposal and the initial price is set as 1 BNB. According to the official doc, the initial price must be 1 BNB or the proposal will be rejected.
 
 On successful proposal you will get a proposal ID, you can get it from the [explorer](https://testnet-explorer.binance.org/) or via `bnbcli` using
 
