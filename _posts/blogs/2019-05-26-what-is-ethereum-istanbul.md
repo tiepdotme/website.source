@@ -5,7 +5,7 @@ date: '2019-05-26 05:30:00'
 tag: ['Ethereum Istanbul', 'Ethereum', 'Fork', 'HardFork']
 permalink: '/blogs/what-is-ethereum-istanbul-upgrade'
 author: niksmac
-meta: ethereum-istanbul-upgrade.jpg
+meta: ethereum-istanbul-upgrade.png
 subtitle: 'Ethereum Istanbul - October 2019 Planned Ethereum Network Upgrade'
 excerpt: 'Ethereum Istanbul - October 2019 Planned Ethereum Network Upgrade which is expected to adapt  few EIPs'
 ---
