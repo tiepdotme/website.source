@@ -11,82 +11,91 @@ email: hexlxlo@xligxhtrxaxixnxs.com
 pgp: B376 B0A4 07CF 4EB7 5B38  DCB0 6D2A DCDD C146 A5BE
 slogan: Technology Supercharged
 masthead: Blockchain Consulting.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://lightrains.com" # the base hostname & protocol for your site
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://lightrains.com' # the base hostname & protocol for your site
 logo: assets/img/lightrains-logo.png
 
 twitter_username: lightrainstech
-github_username:  lightrainstech
-gplus: https://plus.google.com/108900746872278115127
-address: G3B, Thejaswini, Technopark Campus, Trivandrum, 695581
-phone:  91 471 4000056
+github_username: lightrainstech
+gplus: 'https://plus.google.com/108900746872278115127'
+address: 'M2, Gayathri, Technopark Campus, Trivandrum, 695581'
+phone: '91 471 4000056'
 
 # Build settings
 maRkdown: kramdown
 permalink: :title
 
-# Handling Reading
-safe:         false;
-exclude: [
-  ".git",
-  ".svn",
-  ".bundle",
-  "vendor",
-  "assets/semantic",
-  "node_modules",
-  "gulpfile.js",
-  "semantic.json",
-  "package.json",
-  "README.md",
-  "assets/raw",
-  ".gulp-scss-cache",
-  "assets/css/lightbox.min.css",
-  "assets/css/main.css",
-  "assets/css/main.scss",
-  "assets/css/semantic.css",
-  "assets/css/semantic.min.css",
-  "assets/js/isotope.pkgd.js",
-  "assets/js/jquery.min.js",
-  "assets/js/lightbox.min.js",
-  "assets/js/lightbox.min.map",
-  "assets/js/semantic.js",
-  "assets/js/site.js"
-]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+exclude:
+    [
+        '.git',
+        '.svn',
+        '.bundle',
+        'vendor',
+        'assets/semantic',
+        'node_modules',
+        'gulpfile.js',
+        'semantic.json',
+        'package.json',
+        'README.md',
+        'assets/raw',
+        'Gemfile',
+        'Gemfile.lock',
+        '.gulp-scss-cache',
+        'assets/css/lightbox.min.css',
+        'assets/css/main.css',
+        'assets/css/main.scss',
+        'assets/css/semantic.css',
+        'assets/css/semantic.min.css',
+        'assets/js/isotope.pkgd.js',
+        'assets/js/jquery.min.js',
+        'assets/js/lightbox.min.js',
+        'assets/js/lightbox.min.map',
+        'assets/js/semantic.js',
+        'assets/js/site.js',
+    ]
+
+encoding: 'utf-8'
+markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
 plugins:
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-offline
+    - jekyll-gist
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-offline
 
 paginate: 8
-paginate_path: "/blogs/page:num/"
+paginate_path: '/blogs/page:num/'
 tag_page_dir: tag
 tag_feed_dir: tag
 tag_page_layout: tag_page
 tag_feed_layout: tag_feed
 
-social: [ "https://twitter.com/lightrainstech", "https://medium.com/lightrains",  "https://www.facebook.com/lightrainstechnolabs",  "https://plus.google.com/108900746872278115127",  "http://www.linkedin.com/company/1322794",
-"https://github.com/lightrainstech"]
+social:
+    [
+        'https://twitter.com/lightrainstech',
+        'https://medium.com/lightrains',
+        'https://www.facebook.com/lightrainstechnolabs',
+        'https://plus.google.com/108900746872278115127',
+        'http://www.linkedin.com/company/1322794',
+        'https://github.com/lightrainstech',
+    ]
 
 compress_html:
-  clippings: [div, p, ul, td, h1, h2]
-  comments: ["<!-- ", " -->"]
-  endings: []
-  ignore:
-    envs: [local]
-  blanklines: true
-  profile: false
-  startings: []
+    clippings: [div, p, ul, td, h1, h2]
+    comments: ['<!-- ', ' -->']
+    endings: []
+    ignore:
+        envs: [local]
+    blanklines: true
+    profile: false
+    startings: []
 
 ampdir: amp
 
 whitelist:
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-offline
+    - jekyll-gist
+    - jekyll-paginate
+    - jekyll-offline
 
 offline:
-  strategy: network-first-cache-fallback
+    strategy: network-first-cache-fallback
