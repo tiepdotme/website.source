@@ -9,5 +9,5 @@ gem 'fastimage'
 gem 'jekyll', group: :jekyll_plugins
 
 group 'jekyll-plugins' do
-  gem 'jekyll-offline', :git => 'https://github.com/jeremiak/jekyll-offline.git'
+  gem 'jekyll-offline', :git => 'https://github.com/lightrainstech/jekyll-offline.git'
 end
