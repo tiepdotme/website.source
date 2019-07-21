@@ -18,7 +18,7 @@ date: 2016-06-13 11:19:48 +0530
       <ul>
         <li class="item">Power Customer Success</li>
         <li class="item">Solve Meaningful Problems</li>
-        <li class="item">Build and Promote Great Technology</li>
+        <li class="item">Build and Promote Great <a href="/about/work-process-technology">Technology</a></li>
         <li class="item">Work with Brilliant People</li>
       </ul>
       <div class="ui hidden big divider"></div>
