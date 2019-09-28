@@ -28,22 +28,6 @@ h2 {
   color: #323232;
   font-family: "Merriweather Sans", sans-serif; }
 
-body.night {
-  background-color: #333; }
-  body.night p,
-  body.night div,
-  body.night span,
-  body.night a {
-    color: #323232 !important; }
-  body.night h1,
-  body.night h2,
-  body.night h3,
-  body.night h4 {
-    color: #e8e8e8 !important; }
-  body.night a.button.black {
-    background-color: #fff !important;
-    color: #333 !important; }
-
 h1 {
   font-size: 3rem; }
 
@@ -89,7 +73,10 @@ h2 {
   font-style: italic; }
 .page-text p {
   text-justify: inter-character;
-  line-height: 1.75em !important; }
+  line-height: 1.75em !important;
+  letter-spacing: 0.01em;
+  line-height: 1.8;
+  margin: 0 0 10px; }
 
 .footer .slogan {
   font-size: 12px; }
@@ -110,7 +97,8 @@ h2 {
   font-family: "Merriweather Sans", sans-serif; }
 
 .ui.button {
-  font-weight: 300 !important; }
+  font-weight: 300 !important;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1); }
 
 a:not(.button) {
   color: #666 !important;
@@ -402,3 +390,16 @@ abbr[title] {
 @media only screen and (max-width: 767px) {
   .ui.stackable.grid.w > .column:not(.row) {
     margin: -1rem !important; } }
+.process .row {
+  margin-bottom: 10vh !important; }
+
+.callout {
+  background: #000000;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  padding: 5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
