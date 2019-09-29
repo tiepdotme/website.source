@@ -98,7 +98,7 @@ h2 {
 
 .ui.button {
   font-weight: 300 !important;
-  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.1); }
+  box-shadow: 3px 4px 0 yellow !important; }
 
 a:not(.button) {
   color: #666 !important;
@@ -369,8 +369,8 @@ code {
   padding-bottom: 30px; }
 
 ::selection {
-  background-color: #000;
-  color: #fff; }
+  background-color: yellow;
+  color: #333; }
 
 .cuticon {
   color: #fafafa;
