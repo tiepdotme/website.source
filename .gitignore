@@ -9,3 +9,4 @@ assets/raw
 
 .bundle
 vendor
+.jekyll-cache
