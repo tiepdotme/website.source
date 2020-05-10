@@ -79,7 +79,7 @@ title: Process and Technologies
       <div class="item">PyTorch</div>
       <div class="item">Tensorflow</div>
       <div class="item">Keras</div>
-      <div class="item">Sklearn</div>
+      <div class="item">Scikit-learn</div>
     </div>
   </div>
 </div>
