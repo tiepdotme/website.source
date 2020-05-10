@@ -24,7 +24,7 @@ title: Process and Technologies
 
 <div class="ui stackable grid text">
   <div class="four wide column">
-    <b>Server Side</b>
+    <b class="callout">Server Side</b>
     <div class="ui list">
       <div class="item">JavaScript</div>
       <div class="item">Ruby</div>
@@ -33,7 +33,7 @@ title: Process and Technologies
     </div>
   </div>
   <div class="four wide column">
-    <b>Database</b>
+    <b class="callout">Database</b>
     <div class="ui list">
       <div class="item">PostgreSQL</div>
       <div class="item">MySQL</div>
@@ -41,7 +41,7 @@ title: Process and Technologies
     </div>
   </div>
   <div class="four wide column">
-    <b>Fontend</b>
+    <b class="callout">Fontend</b>
     <div class="ui list">
       <div class="item">ReactJS</div>
       <div class="item">Elm</div>
@@ -49,7 +49,7 @@ title: Process and Technologies
     </div>
   </div>
   <div class="four wide column">
-    <b>NLP</b>
+    <b class="callout">NLP</b>
     <div class="ui list">
       <div class="item">Dialogflow</div>
       <div class="item">Rasa</div>
@@ -57,7 +57,7 @@ title: Process and Technologies
     </div>
   </div>
   <div class="four wide column">
-    <b>Blockchain</b>
+    <b class="callout">Blockchain</b>
     <div class="ui list">
       <div class="item">Ethereum</div>
       <div class="item">Bitcoin</div>
@@ -67,14 +67,14 @@ title: Process and Technologies
     </div>
   </div>
   <div class="four wide column">
-    <b>Mobile Apps</b>
+    <b class="callout">Mobile Apps</b>
     <div class="ui list">
       <div class="item">ReactNative</div>
       <div class="item">Fluttr</div>
     </div>
   </div>
   <div class="four wide column">
-    <b>Machine Learning</b>
+    <b class="callout">Machine Learning</b>
     <div class="ui list">
       <div class="item">PyTorch</div>
       <div class="item">Tensorflow</div>
