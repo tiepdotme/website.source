@@ -6,7 +6,7 @@ title: Process and Technologies
 
 # How we work with our clients
 
-<p class="ui text">We have been continually employing new individuals to give extra imaginative thoughts that would enhance our collection of improvement procedures and techniques. We have even figured out how to make our own answers, endeavoring to satisfy our customers' expanding needs, and we have accomplished some remarkable outcomes simultaneously.</p>
+<p class="ui text">We have been continually employing new individuals to give extra imaginative thoughts that would enhance our collection of improvement procedures and techniques. We have even figured out how to make our own answers, endeavouring to satisfy our customers' expanding needs, and we have accomplished some remarkable outcomes simultaneously.</p>
 
 <p class="ui text">But a vision for the future can't be realized without know-how. We partner with our clients to drive real innovation—the kind that turns an idea into an industry—helping them transform and grow their organizations.</p>
 
