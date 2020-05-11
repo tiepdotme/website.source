@@ -28,7 +28,7 @@ title: Process and Technologies
     <div class="four wide column">
       <b class="callout">Server Side</b>
       <div class="ui list">
-        <div class="item">Typescript</div>
+        <div class="item">TypeScript</div>
         <div class="item">JavaScript</div>
         <div class="item">Ruby</div>
         <div class="item">Python</div>
