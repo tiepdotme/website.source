@@ -100,3 +100,4 @@ whitelist:
 
 offline:
     strategy: network-first-cache-fallback
+    version: 2
